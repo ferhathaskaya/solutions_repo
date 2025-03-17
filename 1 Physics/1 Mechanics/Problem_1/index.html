@@ -172,7 +172,26 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
-<p>Lorem ipsum dolor...</p>
+<p>import numpy as np
+import matplotlib.pyplot as plt</p>
+<h1 id="constants">Constants</h1>
+<p>g = 9.81  # Acceleration due to gravity (m/s^2)
+v0_values = [10, 20, 30]  # Different initial velocities</p>
+<h1 id="angle-range">Angle range</h1>
+<p>angles = np.linspace(0, 90, 100)  # 0 to 90 degrees
+angles_rad = np.radians(angles)  # Convert to radians</p>
+<p>plt.figure(figsize=(8, 6))</p>
+<h1 id="compute-and-plot-range-for-different-initial-velocities">Compute and plot range for different initial velocities</h1>
+<p>for v0 in v0_values:
+    R = (v0**2 * np.sin(2 * angles_rad)) / g
+    plt.plot(angles, R, label=f'v0 = {v0} m/s')</p>
+<h1 id="labels-and-legend">Labels and legend</h1>
+<p>plt.xlabel("Angle of Projection (degrees)")
+plt.ylabel("Range (m)")
+plt.title("Projectile Range as a Function of Angle")
+plt.legend()
+plt.grid()
+plt.show()</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
