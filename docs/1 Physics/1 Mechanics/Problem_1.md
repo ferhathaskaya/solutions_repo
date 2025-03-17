@@ -17,9 +17,7 @@ A projectile is subject to **uniform acceleration** due to gravity and follows a
 #### **Equations of Motion**
 Using kinematic equations:
 
-- **Horizontal Motion**
-
- (constant velocity, since no horizontal acceleration):
+- **Horizontal Motion** (constant velocity, since no horizontal acceleration):
 
 $$
   x = v_0 \cos(\theta) t
@@ -89,9 +87,10 @@ We will visualize how the range varies with \( \theta \) for different \( v_0 \)
 - Explores different values of \( v_0 \).
 
 
-![alt text](output.png)
+ ![alt text](output.png)
 
-Here is the interact,ve plot showing the **range of a projectile as a function of the launch angle** for different initial velocities. 📊
+
+Here is the plot showing the **range of a projectile as a function of the launch angle** for different initial velocities. 📊
 
 ### **Key Observations:**
 1. The range follows a symmetric pattern with a **peak at 45°**, confirming our theoretical derivation.
@@ -103,13 +102,14 @@ Here is the interact,ve plot showing the **range of a projectile as a function o
 ---
 
 ## **Step 4: Discussion on Model Limitations & Real-World Applications**
-While our model is useful for **idealized projectile motion**, real-world scenarios involve:
+While the model is useful for **idealized projectile motion**, real-world scenarios involve:
+
 - **Air Resistance** – Reduces range significantly, especially for high velocities.
 - **Wind Effects** – Can increase or decrease range depending on direction.
 - **Uneven Terrain** – Landing heights vary, affecting the actual range.
-- **Spin Effects** – In sports, spin affects trajectory via the Magnus force (e.g., soccer or baseball).
+- **Spin Effects** – In sports, spin affects trajectory via the Magnus force (e.g., football or baseball).
 
 ### **Practical Applications**
-- **Sports Science**: Optimizing angles for maximum shot distance (e.g., golf, soccer, basketball).
+- **Sports Science**: Optimizing angles for maximum shot distance (e.g., golf, football, basketball).
 - **Military Applications**: Calculating artillery or missile trajectories.
-- **Engineering & Physics**: Understanding kinematics in robotics, aerospace, and mechanical systems.
+- **Engineering & Physics**: Understanding knowledge in robotics, aerospace, and mechanical systems.
