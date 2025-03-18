@@ -94,9 +94,9 @@ We'll integrate the equation using the **Runge-Kutta method (RK4)** to analyze d
 ---
 ### **Observations Under Resonance Conditions** 
    
-![alt text](image-2.png)
+!![alt text](<Forced Damped Pendulum Motion Under Resonance.png>)
 
-![alt text](image-3.png)
+![alt text](<Phase Space Plot Under Resonance.png>)
 
 1. **Time Evolution of Angular Displacement**:
    - The oscillations in the **first plot** show a **significant increase in amplitude** compared to the previous case.
@@ -116,11 +116,11 @@ We'll integrate the equation using the **Runge-Kutta method (RK4)** to analyze d
 ### Investigating Chaos 
 ---
 
-![alt text](image-4.png)
+![alt text](<Forced Damped Pendulum Motion Under Chaotic Con.png>)
 
-![alt text](image-5.png)
+![alt text](<Phase Space Plot Under Chaotic Conditions.png>)
 
-![alt text](image-6.png)
+![alt text](<Poincaré Section (Indicating Chaos).png>)
 
 ### Observations Under Chaotic Conditions
 
