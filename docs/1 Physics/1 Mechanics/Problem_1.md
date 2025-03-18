@@ -1,6 +1,8 @@
 # Problem 1
 
-Let's break it down step by step and implement a simulation to visualize how the range depends on the angle of projection.
+**Investigating the Range as a Function of the Angle of Projection**
+
+Implementation of a simulation to visualize how the range depends on the angle of projection.
 
 ---
 
