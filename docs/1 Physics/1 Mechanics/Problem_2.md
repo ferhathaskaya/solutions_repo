@@ -8,13 +8,11 @@ The **forced damped pendulum** is a **nonlinear dynamical system** that exhibits
 
 ## Step 1: Theoretical Foundation
 
-### 1.1 Governing Differential Equation**
+### 1.1 Governing Differential Equation
 The motion of a **forced damped pendulum** is governed by the following equation:
 
 $$
-
 \frac{d^2\theta}{dt^2} + \gamma \frac{d\theta}{dt} + \frac{g}{L} \sin\theta = F_0 \cos(\omega t)
-
 $$
 
 where:
