@@ -100,13 +100,11 @@ We'll integrate the equation using the **Runge-Kutta method (RK4)** to analyze d
 ![alt text](<Phase Space Plot Under Resonance.png>)
    (The **second plot** shows a much wider trajectory, indicating larger velocity variations.)
 
-1. **Time Evolution of Angular Displacement**:
-   
-   - This confirms that at **resonance (\(\omega = \omega_0\))**, the external force adds energy efficiently, amplifying the motion.
+1. **Time Evolution of Angular Displacement**: 
+ - This confirms that at **resonance (\(\omega = \omega_0\))**, the external force adds energy efficiently, amplifying the motion.
    
 2. **Phase Space Plot**:
-
-   - The pendulum's motion is more **energetic and sustained**, as expected in a resonance condition.
+- The pendulum's motion is more **energetic and sustained**, as expected in a resonance condition.
 ---
 
 ### Key Takeaways on Resonance:
@@ -132,17 +130,13 @@ We'll integrate the equation using the **Runge-Kutta method (RK4)** to analyze d
 ### Observations Under Chaotic Conditions
 
 1. **Time Evolution of Angular Displacement**:
+- Unlike the smooth periodic motion seen before, the pendulum exhibits erratic behavior, a signature of **chaotic motion**.
+2. **Phase Space Plot (\(\theta\) vs. \(\dot{\theta}\))**:   
+- This indicates **sensitive dependence on initial conditions**, a key characteristic of **chaos**.
 
-   - Unlike the smooth periodic motion seen before, the pendulum exhibits erratic behavior, a signature of **chaotic motion**.
-
-2. **Phase Space Plot (\(\theta\) vs. \(\dot{\theta}\))**:
-   
-   - This indicates **sensitive dependence on initial conditions**, a key characteristic of **chaos**.
-
-3. **Poincaré Section**:
-   
-   - Instead of a single periodic point (as in regular motion), we see a **scattered set of points**.
-   - This suggests a **strange attractor**, a hallmark of chaotic dynamics.
+3. **Poincaré Section**:  
+- Instead of a single periodic point (as in regular motion), we see a **scattered set of points**.
+- This suggests a **strange attractor**, a hallmark of chaotic dynamics.
 
 ---
 
