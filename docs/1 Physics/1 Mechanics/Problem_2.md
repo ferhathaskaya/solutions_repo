@@ -117,23 +117,28 @@ We'll integrate the equation using the **Runge-Kutta method (RK4)** to analyze d
 ---
 
 ![alt text](<Forced Damped Pendulum Motion Under Chaotic Con.png>)
+(The **first plot** shows **irregular, unpredictable oscillations**.)
+
 
 ![alt text](<Phase Space Plot Under Chaotic Conditions.png>)
+(The **second plot** shows a **highly irregular trajectory**, with no clear repeating patterns.)
+
 
 ![alt text](<Poincaré Section (Indicating Chaos).png>)
+(The **third plot** is a **Poincaré section**, which samples points at regular time intervals.)
 
 ### Observations Under Chaotic Conditions
 
 1. **Time Evolution of Angular Displacement**:
-   - The **first plot** shows **irregular, unpredictable oscillations**.
+
    - Unlike the smooth periodic motion seen before, the pendulum exhibits erratic behavior, a signature of **chaotic motion**.
 
 2. **Phase Space Plot (\(\theta\) vs. \(\dot{\theta}\))**:
-   - The **second plot** shows a **highly irregular trajectory**, with no clear repeating patterns.
+   
    - This indicates **sensitive dependence on initial conditions**, a key characteristic of **chaos**.
 
 3. **Poincaré Section**:
-   - The **third plot** is a **Poincaré section**, which samples points at regular time intervals.
+   
    - Instead of a single periodic point (as in regular motion), we see a **scattered set of points**.
    - This suggests a **strange attractor**, a hallmark of chaotic dynamics.
 
