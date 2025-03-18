@@ -1,10 +1,10 @@
 # Problem 1
 
-This is an exciting problem in projectile motion! 🚀 Let's break it down step by step and implement a simulation to visualize how the range depends on the angle of projection.
+This is an exciting problem in projectile motion! Let's break it down step by step and implement a simulation to visualize how the range depends on the angle of projection.
 
 ---
 
-## **Step 1: Theoretical Foundation** 📚
+## **Step 1: Theoretical Foundation** 
 
 ### **Derivation of Governing Equations**
 
