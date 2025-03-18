@@ -99,7 +99,7 @@ We'll integrate the equation using the **Runge-Kutta method (RK4)** to analyze d
          (The **second plot** shows a much wider trajectory, indicating larger velocity variations.)
 
 **Time Evolution of Angular Displacement**: 
- - This confirms that at **resonance (\(\omega = \omega_0\))**, the external force adds energy efficiently, amplifying the motion.
+- This confirms that at **resonance (\(\omega = \omega_0\))**, the external force adds energy efficiently, amplifying the motion.
    
 **Phase Space Plot**:
 - The pendulum's motion is more **energetic and sustained**, as expected in a resonance condition.
