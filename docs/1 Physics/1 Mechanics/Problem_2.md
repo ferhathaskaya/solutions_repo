@@ -59,13 +59,13 @@ We'll integrate the equation using the **Runge-Kutta method (RK4)** to analyze d
 1. Define the differential equation as a system of first-order ODEs.
 2. Implement **numerical integration** using the **Runge-Kutta method**.
 3. Explore different values of:
-   - **Damping coefficient \( \gamma \)**.
-   - **Driving force amplitude \( F_0 \)**.
-   - **Driving frequency \( \omega \)**.
+   - Damping coefficient \( \gamma \).
+   - Driving force amplitude \( F_0 \).
+   - Driving frequency \( \omega \).
 4. Visualize:
-   - **Time evolution of \( \theta \) (angular displacement)**.
-   - **Phase space plot (\(\theta\) vs. \( \dot{\theta} \))**.
-   - **Poincaré section (chaotic behavior analysis)**.
+   - Time evolution of \( \theta \) (angular displacement).
+   - Phase space plot (\(\theta\) vs. \( \dot{\theta} \)).
+   - Poincaré section (chaotic behavior analysis).
 
    ![alt text](image.png)
       (The **first plot** shows how the pendulum’s angle \( \theta(t) \) changes over time.)
