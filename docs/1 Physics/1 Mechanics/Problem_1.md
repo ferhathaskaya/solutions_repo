@@ -80,7 +80,7 @@ We will visualize how the range varies with \( \theta \) for different \( v_0 \)
 
 ---
 
-## **Step 3: Computational Implementation** 🖥️
+## **Step 3: Computational Implementation** 
 
 - Simulates projectile motion.
 - Plots the range as a function of the angle \( \theta \).
@@ -90,7 +90,7 @@ We will visualize how the range varies with \( \theta \) for different \( v_0 \)
  ![alt text](output.png)
 
 
-Here is the plot showing the **range of a projectile as a function of the launch angle** for different initial velocities. 📊
+Here is the plot showing the **range of a projectile as a function of the launch angle** for different initial velocities. 
 
 ### **Key Observations:**
 1. The range follows a symmetric pattern with a **peak at 45°**, confirming our theoretical derivation.
