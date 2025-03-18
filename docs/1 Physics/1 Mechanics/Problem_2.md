@@ -88,3 +88,60 @@ We'll integrate the equation using the **Runge-Kutta method (RK4)** to analyze d
 ## Step 3: Exploring Resonance and Chaos
 - **Resonance:** If we set \( \omega = \omega_0 = \sqrt{g/L} \), we should see **amplified oscillations**.
 - **Chaos:** Increasing **driving amplitude \( F_0 \) significantly** can lead to **chaotic motion**, where the phase space plot becomes highly irregular.
+
+---
+### Investigating Resonance Conditions 
+---
+### **Observations Under Resonance Conditions** 
+   
+![alt text](image-2.png)
+
+![alt text](image-3.png)
+
+1. **Time Evolution of Angular Displacement**:
+   - The oscillations in the **first plot** show a **significant increase in amplitude** compared to the previous case.
+   - This confirms that at **resonance (\(\omega = \omega_0\))**, the external force adds energy efficiently, amplifying the motion.
+   
+2. **Phase Space Plot**:
+   - The **second plot** shows a much wider trajectory, indicating larger velocity variations.
+   - The pendulum's motion is more **energetic and sustained**, as expected in a resonance condition.
+---
+
+### Key Takeaways on Resonance:
+- **Resonance leads to maximum energy absorption**, resulting in large oscillations.  
+- **If damping is low**, the system can experience **runaway oscillations** (dangerous in engineering).  
+- **In real-world applications**, engineers must **avoid resonance** in buildings, bridges, and aircraft structures to prevent failure.
+
+---
+### Investigating Chaos 
+---
+
+![alt text](image-4.png)
+
+![alt text](image-5.png)
+
+![alt text](image-6.png)
+
+### Observations Under Chaotic Conditions
+
+1. **Time Evolution of Angular Displacement**:
+   - The **first plot** shows **irregular, unpredictable oscillations**.
+   - Unlike the smooth periodic motion seen before, the pendulum exhibits erratic behavior, a signature of **chaotic motion**.
+
+2. **Phase Space Plot (\(\theta\) vs. \(\dot{\theta}\))**:
+   - The **second plot** shows a **highly irregular trajectory**, with no clear repeating patterns.
+   - This indicates **sensitive dependence on initial conditions**, a key characteristic of **chaos**.
+
+3. **Poincaré Section**:
+   - The **third plot** is a **Poincaré section**, which samples points at regular time intervals.
+   - Instead of a single periodic point (as in regular motion), we see a **scattered set of points**.
+   - This suggests a **strange attractor**, a hallmark of chaotic dynamics.
+
+---
+
+### **Key Takeaways on Chaos:**
+- **Chaos emerges when the external forcing overcomes damping and natural oscillations**.  
+- **Small changes in initial conditions can lead to drastically different outcomes** (butterfly effect).  
+- **Many real-world systems** exhibit chaos, such as **weather patterns, stock markets, and biological rhythms**.  
+
+
