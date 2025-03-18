@@ -56,13 +56,13 @@ Since the equation is **nonlinear**, we'll use **numerical methods** to solve it
 We'll integrate the equation using the **Runge-Kutta method (RK4)** to analyze different behaviors.
 
 ### 2.1 Implementation Plan
-1. Define the differential equation as a system of first-order ODEs.
-2. Implement **numerical integration** using the **Runge-Kutta method**.
-3. Explore different values of:
+- Define the differential equation as a system of first-order ODEs.
+- Implement **numerical integration** using the **Runge-Kutta method**.
+- Explore different values of:
    - Damping coefficient \( \gamma \).
    - Driving force amplitude \( F_0 \).
    - Driving frequency \( \omega \).
-4. Visualize:
+- Visualize:
    - Time evolution of \( \theta \) (angular displacement).
    - Phase space plot (\(\theta\) vs. \( \dot{\theta} \)).
    - Poincaré section (chaotic behavior analysis).
@@ -93,10 +93,10 @@ We'll integrate the equation using the **Runge-Kutta method (RK4)** to analyze d
 ### **Observations Under Resonance Conditions** 
    
    ![alt text](<Forced Damped Pendulum Motion Under Resonance.png>)
-   (The oscillations in the **first plot** show a **significant increase in amplitude** compared to the previous case.)
+         (The oscillations in the **first plot** show a **significant increase in amplitude** compared to the previous case.)
 
    ![alt text](<Phase Space Plot Under Resonance.png>)
-   (The **second plot** shows a much wider trajectory, indicating larger velocity variations.)
+         (The **second plot** shows a much wider trajectory, indicating larger velocity variations.)
 
 **Time Evolution of Angular Displacement**: 
  - This confirms that at **resonance (\(\omega = \omega_0\))**, the external force adds energy efficiently, amplifying the motion.
