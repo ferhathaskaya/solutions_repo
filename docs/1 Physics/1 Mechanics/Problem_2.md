@@ -94,7 +94,7 @@ We'll integrate the equation using the **Runge-Kutta method (RK4)** to analyze d
 ---
 ### **Observations Under Resonance Conditions** 
    
-!![alt text](<Forced Damped Pendulum Motion Under Resonance.png>)
+![alt text](<Forced Damped Pendulum Motion Under Resonance.png>)
 
 ![alt text](<Phase Space Plot Under Resonance.png>)
 
