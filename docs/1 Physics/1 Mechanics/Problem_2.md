@@ -95,15 +95,17 @@ We'll integrate the equation using the **Runge-Kutta method (RK4)** to analyze d
 ### **Observations Under Resonance Conditions** 
    
 ![alt text](<Forced Damped Pendulum Motion Under Resonance.png>)
+(The oscillations in the **first plot** show a **significant increase in amplitude** compared to the previous case.)
 
 ![alt text](<Phase Space Plot Under Resonance.png>)
+(The **second plot** shows a much wider trajectory, indicating larger velocity variations.)
 
 1. **Time Evolution of Angular Displacement**:
-   - The oscillations in the **first plot** show a **significant increase in amplitude** compared to the previous case.
+   
    - This confirms that at **resonance (\(\omega = \omega_0\))**, the external force adds energy efficiently, amplifying the motion.
    
 2. **Phase Space Plot**:
-   - The **second plot** shows a much wider trajectory, indicating larger velocity variations.
+
    - The pendulum's motion is more **energetic and sustained**, as expected in a resonance condition.
 ---
 
