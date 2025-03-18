@@ -95,10 +95,10 @@ We'll integrate the equation using the **Runge-Kutta method (RK4)** to analyze d
 ### **Observations Under Resonance Conditions** 
    
 ![alt text](<Forced Damped Pendulum Motion Under Resonance.png>)
-(The oscillations in the **first plot** show a **significant increase in amplitude** compared to the previous case.)
+   (The oscillations in the **first plot** show a **significant increase in amplitude** compared to the previous case.)
 
 ![alt text](<Phase Space Plot Under Resonance.png>)
-(The **second plot** shows a much wider trajectory, indicating larger velocity variations.)
+   (The **second plot** shows a much wider trajectory, indicating larger velocity variations.)
 
 1. **Time Evolution of Angular Displacement**:
    
@@ -119,15 +119,15 @@ We'll integrate the equation using the **Runge-Kutta method (RK4)** to analyze d
 ---
 
 ![alt text](<Forced Damped Pendulum Motion Under Chaotic Con.png>)
-(The **first plot** shows **irregular, unpredictable oscillations**.)
+   (The **first plot** shows **irregular, unpredictable oscillations**.)
 
 
 ![alt text](<Phase Space Plot Under Chaotic Conditions.png>)
-(The **second plot** shows a **highly irregular trajectory**, with no clear repeating patterns.)
+   (The **second plot** shows a **highly irregular trajectory**, with no clear repeating patterns.)
 
 
 ![alt text](<Poincaré Section (Indicating Chaos).png>)
-(The **third plot** is a **Poincaré section**, which samples points at regular time intervals.)
+   (The **third plot** is a **Poincaré section**, which samples points at regular time intervals.)
 
 ### Observations Under Chaotic Conditions
 
