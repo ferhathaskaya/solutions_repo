@@ -63,7 +63,7 @@ We'll integrate the equation using the **Runge-Kutta method (RK4)** to analyze d
    - Driving force amplitude \( F_0 \).
    - Driving frequency \( \omega \).
 - Visualize:
-   - Time evolution of \( \theta \) (angular displacement).
+   -Time evolution of \( \theta \) (angular displacement).
    - Phase space plot (\(\theta\) vs. \( \dot{\theta} \)).
    - Poincaré section (chaotic behavior analysis).
 
