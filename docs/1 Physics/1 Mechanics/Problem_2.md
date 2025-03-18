@@ -70,7 +70,7 @@ We'll integrate the equation using the **Runge-Kutta method (RK4)** to analyze d
    ![alt text](image.png)
       (The **first plot** shows how the pendulum’s angle \( \theta(t) \) changes over time.)
    ![alt text](image-1.png)
-      (- The **second plot** shows the pendulum's **velocity vs. angle**, forming a closed trajectory.)
+      (The **second plot** shows the pendulum's **velocity vs. angle**, forming a closed trajectory.)
 
 
 ### Simulation Results & Observations 
