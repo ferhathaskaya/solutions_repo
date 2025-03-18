@@ -50,6 +50,26 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#step-1-theoretical-foundation">Step 1: Theoretical Foundation</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#11-governing-differential-equation">1.1 Governing Differential Equation**</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#12-approximate-solution-for-small-angles">1.2 Approximate Solution for Small Angles</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#13-resonance-conditions">1.3 Resonance Conditions</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-computational-simulation">Step 2: Computational Simulation</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#21-implementation-plan">2.1 Implementation Plan</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#simulation-results-observations">Simulation Results &amp; Observations</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3-exploring-resonance-and-chaos">Step 3: Exploring Resonance and Chaos</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -172,6 +192,79 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-2">Problem 2</h1>
+<p><strong>Investigating the Dynamics of a Forced Damped Pendulum</strong> </p>
+<p>The <strong>forced damped pendulum</strong> is a <strong>nonlinear dynamical system</strong> that exhibits simple harmonic motion, resonance, and even chaotic behavior under different conditions. </p>
+<hr/>
+<h2 id="step-1-theoretical-foundation">Step 1: Theoretical Foundation</h2>
+<h3 id="11-governing-differential-equation">1.1 Governing Differential Equation**</h3>
+<p>The motion of a <strong>forced damped pendulum</strong> is governed by the following equation:</p>
+<p>$$</p>
+<p>\frac{d^2\theta}{dt^2} + \gamma \frac{d\theta}{dt} + \frac{g}{L} \sin\theta = F_0 \cos(\omega t)</p>
+<p>$$</p>
+<p>where:
+- <span class="arithmatex">\( \theta \)</span> is the angular displacement.
+- <span class="arithmatex">\( \gamma \)</span> is the <strong>damping coefficient</strong> (controls energy loss due to friction).
+- <span class="arithmatex">\( g \)</span> is gravitational acceleration.
+- <span class="arithmatex">\( L \)</span> is the length of the pendulum.
+- <span class="arithmatex">\( F_0 \)</span> is the amplitude of the external <strong>driving force</strong>.
+- <span class="arithmatex">\( \omega \)</span> is the <strong>driving frequency</strong>.</p>
+<h3 id="12-approximate-solution-for-small-angles">1.2 Approximate Solution for Small Angles</h3>
+<p>For small oscillations, we use the <strong>small-angle approximation</strong>:  </p>
+<div class="arithmatex">\[
+\sin\theta \approx \theta
+\]</div>
+<p>This simplifies the equation to:</p>
+<div class="arithmatex">\[
+\frac{d^2\theta}{dt^2} + \gamma \frac{d\theta}{dt} + \frac{g}{L} \theta = F_0 \cos(\omega t)
+\]</div>
+<p>This is a <strong>driven damped harmonic oscillator equation</strong>, which has well-known solutions in terms of <strong>resonance and transient motion</strong>.</p>
+<h3 id="13-resonance-conditions">1.3 Resonance Conditions</h3>
+<p>Resonance occurs when the external driving frequency <strong>matches the system's natural frequency</strong>:</p>
+<div class="arithmatex">\[
+\omega \approx \omega_0 = \sqrt{\frac{g}{L}}
+\]</div>
+<ul>
+<li>If <span class="arithmatex">\( \gamma \)</span> (damping) is small, resonance leads to <strong>large oscillations</strong>.</li>
+<li>If <span class="arithmatex">\( \gamma \)</span> is large, oscillations remain damped.</li>
+</ul>
+<hr/>
+<h2 id="step-2-computational-simulation">Step 2: Computational Simulation</h2>
+<p>Since the equation is <strong>nonlinear</strong>, we'll use <strong>numerical methods</strong> to solve it.</p>
+<p>We'll integrate the equation using the <strong>Runge-Kutta method (RK4)</strong> to analyze different behaviors.</p>
+<h3 id="21-implementation-plan">2.1 Implementation Plan</h3>
+<ol>
+<li>Define the differential equation as a system of first-order ODEs.</li>
+<li>Implement <strong>numerical integration</strong> using the <strong>Runge-Kutta method</strong>.</li>
+<li>Explore different values of:</li>
+<li><strong>Damping coefficient <span class="arithmatex">\( \gamma \)</span></strong>.</li>
+<li><strong>Driving force amplitude <span class="arithmatex">\( F_0 \)</span></strong>.</li>
+<li><strong>Driving frequency <span class="arithmatex">\( \omega \)</span></strong>.</li>
+<li>Visualize:</li>
+<li><strong>Time evolution of <span class="arithmatex">\( \theta \)</span> (angular displacement)</strong>.</li>
+<li><strong>Phase space plot (<span class="arithmatex">\(\theta\)</span> vs. <span class="arithmatex">\( \dot{\theta} \)</span>)</strong>.</li>
+<li><strong>Poincaré section (chaotic behavior analysis)</strong>.</li>
+</ol>
+<p><img alt="alt text" src="../image.png"/></p>
+<p><img alt="alt text" src="../image-1.png"/></p>
+<h3 id="simulation-results-observations">Simulation Results &amp; Observations</h3>
+<ol>
+<li><strong>Time Evolution of Angular Displacement</strong>:</li>
+<li>The <strong>first plot</strong> shows how the pendulum’s angle <span class="arithmatex">\( \theta(t) \)</span> changes over time.</li>
+<li>
+<p>The <strong>oscillations</strong> exhibit damping but are also influenced by the <strong>external periodic force</strong>, leading to complex periodic motion.</p>
+</li>
+<li>
+<p><strong>Phase Space Plot (<span class="arithmatex">\( \theta \)</span> vs. <span class="arithmatex">\( \dot{\theta} \)</span>)</strong>:</p>
+</li>
+<li>The <strong>second plot</strong> shows the pendulum's <strong>velocity vs. angle</strong>, forming a closed trajectory.</li>
+<li>This is characteristic of <strong>regular oscillations</strong>, but under different conditions, this could transition into <strong>chaotic motion</strong>.</li>
+</ol>
+<hr/>
+<h2 id="step-3-exploring-resonance-and-chaos">Step 3: Exploring Resonance and Chaos</h2>
+<ul>
+<li><strong>Resonance:</strong> If we set <span class="arithmatex">\( \omega = \omega_0 = \sqrt{g/L} \)</span>, we should see <strong>amplified oscillations</strong>.</li>
+<li><strong>Chaos:</strong> Increasing <strong>driving amplitude <span class="arithmatex">\( F_0 \)</span> significantly</strong> can lead to <strong>chaotic motion</strong>, where the phase space plot becomes highly irregular.</li>
+</ul>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
