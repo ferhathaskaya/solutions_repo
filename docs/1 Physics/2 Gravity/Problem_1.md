@@ -94,6 +94,8 @@ Let's implement this:
 
 ### **Python Code for Orbital Simulation and Kepler’s Law Verification**
 
+![alt text](<Kepler's Third Law Verification.png>)
+
 
 The plot confirms **Kepler's Third Law**: the relationship between \( T^2 \) and \( r^3 \) is linear, indicating that the orbital period squared is indeed proportional to the orbital radius cubed.
 
@@ -129,3 +131,6 @@ We derived Kepler’s Third Law, implemented a computational verification, and e
 This knowledge is foundational for **space exploration, astrophysics, and planetary science**!  
 
 Add visuals...
+1 Add tomorrow
+2 Add tomorrow
+3 Add tomorrow
