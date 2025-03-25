@@ -74,8 +74,20 @@
 <ul>
 <li class="toctree-l4"><a class="reference internal" href="#calculating-masses-and-distances">Calculating Masses and Distances</a>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#example-moons-orbit-around-earth">Example: Moon’s Orbit around Earth</a>
+<li class="toctree-l4"><a class="reference internal" href="#moons-orbit-around-earth-a-perfect-real-world-application-of-keplers-third-law-and-newtonian-gravity">Moon’s orbit around Earth — a perfect real-world application of Kepler’s Third Law and Newtonian gravity.</a>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="#known-parameters">Known Parameters:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#using-keplers-third-law">Using Kepler’s Third Law</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#result-moons-orbital-period-calculated">Result: Moon’s Orbital Period (Calculated)</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#real-value-273-days">Real value: 27.3 days</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#_1"></a>
+<ul>
 <li class="toctree-l4"><a class="reference internal" href="#exoplanet-discovery">Exoplanet Discovery</a>
 </li>
 </ul>
@@ -234,7 +246,7 @@
 - Calculate planetary masses and distances using observational data.<br/>
 - Predict satellite orbits, aiding space exploration.<br/>
 - Explain the motions of celestial bodies in our solar system and beyond.  </p>
-<p>In this document, we will:<br/>
+<p>In this document, I will try to implement:<br/>
 1. <strong>Derive Kepler’s Third Law</strong> from Newton’s laws.<br/>
 2. <strong>Discuss its implications</strong> in astronomy.<br/>
 3. <strong>Simulate orbital motion</strong> to verify the law computationally.<br/>
@@ -284,11 +296,41 @@ $$</p>
 <li>By measuring the orbital period and radius of a planet or moon, we can determine the <strong>mass of the central body</strong>.  </li>
 <li>The formula is used extensively in calculating the mass of stars, planets, and even galaxies.  </li>
 </ul>
-<h3 id="example-moons-orbit-around-earth"><strong>Example: Moon’s Orbit around Earth</strong></h3>
-<p>For the Moon orbiting the Earth:<br/>
-- <span class="arithmatex">\( T = 27.3 \)</span> days<br/>
-- <span class="arithmatex">\( r = 3.84 \times 10^8 \)</span> m<br/>
-- By plugging values into the formula, we can estimate Earth’s mass.  </p>
+<h3 id="moons-orbit-around-earth-a-perfect-real-world-application-of-keplers-third-law-and-newtonian-gravity"><strong>Moon’s orbit around Earth</strong> — a perfect real-world application of <strong>Kepler’s Third Law</strong> and Newtonian gravity.</h3>
+<hr/>
+<h3 id="known-parameters"><strong>Known Parameters</strong>:</h3>
+<ul>
+<li><strong>Mass of Earth</strong>:<br/>
+$$
+  5.972 \times 10^{24} \, \text{kg}
+$$</li>
+<li><strong>Average distance from Earth to Moon (r)</strong>:<br/>
+$$
+  3.844 \times 10^8 \, \text{m}
+$$</li>
+<li><strong>Orbital period of the Moon (T)</strong>:<br/>
+$$
+  27.3 \, \text{days} = 2.36 \times 10^6 \, \text{seconds}
+$$</li>
+</ul>
+<h3 id="using-keplers-third-law"><strong>Using Kepler’s Third Law</strong></h3>
+<p>We can verify this with the formula:
+$$
+T^2 = \frac{4\pi^2 r^3}{GM}
+$$</p>
+<p>Let’s compute the period from scratch and compare it to the known 27.3 days.</p>
+<h3 id="result-moons-orbital-period-calculated"><strong>Result: Moon’s Orbital Period (Calculated)</strong></h3>
+<ul>
+<li><strong>Calculated <span class="arithmatex">\( T \)</span></strong>:<br/>
+<strong>2,371,877 seconds</strong> ≈ <strong>27.45 days</strong></li>
+</ul>
+<h3 id="real-value-273-days">Real value: 27.3 days</h3>
+<p>Our calculated value is extremely close to the observed orbital period — just a slight deviation due to averaging and simplifications (e.g., perfectly circular orbit assumption).</p>
+<h2 id="_1"></h2>
+<ul>
+<li>This shows how <strong>Newton’s version of Kepler’s Third Law</strong> accurately predicts real-world motion .</li>
+<li>By just knowing <strong>distance and Earth’s mass</strong>, we can compute <strong>how long it takes the Moon to orbit</strong>!</li>
+</ul>
 <h3 id="exoplanet-discovery"><strong>Exoplanet Discovery</strong></h3>
 <ul>
 <li>Kepler’s Third Law is used to determine <strong>the mass of exoplanets</strong> based on their orbits around distant stars.  </li>
