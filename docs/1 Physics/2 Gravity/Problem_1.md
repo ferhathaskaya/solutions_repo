@@ -95,7 +95,7 @@ Let's implement this:
 ### **Orbital Simulation and Kepler’s Law Verification**
 
 ### **4.1 Scatter Plot of $(T^2)$ vs. $(r^3)$ with Best-Fit Line** 
-![alt text](<Kepler's Third Law $T^2$ Vs $R^3$ (2).png>)
+![alt text](image.png)
 - The **linear trendline** confirms that $(T^2)$ is directly proportional to $(r^3)$.  
 - This supports Kepler’s Third Law: **$(T^2 \propto r^3)$**.
 
