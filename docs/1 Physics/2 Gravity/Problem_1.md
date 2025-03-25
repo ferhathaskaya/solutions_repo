@@ -92,12 +92,21 @@ The simulation will:
 
 Let's implement this:  
 
-### **Python Code for Orbital Simulation and Kepler’s Law Verification**
+### **Orbital Simulation and Kepler’s Law Verification**
 
-![alt text](<Kepler's Third Law Verification.png>)
+### **4.1 Scatter Plot of $(T^2)$ vs. $(r^3)$ with Best-Fit Line** 
+![alt text](<Kepler's Third Law $T^2$ Vs $R^3$.png>)
+- The **linear trendline** confirms that $(T^2)$ is directly proportional to $(r^3)$.  
+- This supports Kepler’s Third Law: **$(T^2 \propto r^3)$**.
 
-
-The plot confirms **Kepler's Third Law**: the relationship between \( T^2 \) and \( r^3 \) is linear, indicating that the orbital period squared is indeed proportional to the orbital radius cubed.
+### **4.2 Log-Log Plot of \(T^2\) vs. \(r^3\)** 
+![alt text](<Log-Log Plot Of Kepler's Third Law.png>)
+- This **logarithmic transformation** helps visualize power-law relationships.  
+- The **straight-line pattern** confirms the proportionality.
+### **4.3️ Circular Orbits of Multiple Planets at Different Radii**  
+![alt text](<Circular Orbits At Different Radii.png>)
+- Each orbit represents a planet at increasing distances from the Sun.  
+- According to Kepler’s Law, planets farther away have **longer orbital periods**.  
 
 ---
 
@@ -123,14 +132,22 @@ where \( M_1 \) and \( M_2 \) are the masses of the two orbiting bodies.
 ---
 
 ## **6. Conclusion and Further Study**  
-We derived Kepler’s Third Law, implemented a computational verification, and explored real-world implications. **Next steps for further learning:**  
-- Simulating **elliptical orbits** using Newton’s laws.  
-- Studying the **three-body problem** for complex gravitational interactions.  
-- Analyzing gravitational interactions in **galaxies and star clusters**.  
+Kepler’s Third Law derived, implemented a computational verification, and explored real-world implications. This knowledge is foundational for space exploration, astrophysics, and planetary science!  
 
-This knowledge is foundational for **space exploration, astrophysics, and planetary science**!  
+---
 
-Add visuals...
-1 Add tomorrow
-2 Add tomorrow
-3 Add tomorrow
+ ## **Simulation of Hohmann Transfer Orbit**
+![alt text](<Hohmann Transfer Orbit Earth To Mars.png>)
+
+
+###  What's Happening in the Plot:
+- **Blue dashed circle**: Earth's orbit (1 AU from the Sun).
+- **Red dashed circle**: Mars' orbit (~1.524 AU).
+- **Green arc**: The **Hohmann transfer path**—the most energy-efficient trajectory to reach Mars.
+- **Yellow dot**: The Sun at the center of the Solar System.
+
+### Key Points:
+- The transfer orbit is **elliptical**, with **perihelion** at Earth's orbit and **aphelion** at Mars'.
+- The simulation represents **half of the elliptical orbit**, which is the typical path a spacecraft takes to go from Earth to Mars.
+
+---
