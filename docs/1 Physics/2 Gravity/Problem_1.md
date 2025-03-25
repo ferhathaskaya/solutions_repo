@@ -173,7 +173,7 @@ Kepler’s Third Law derived, implemented a computational verification, and expl
 
 ---
 
- ## **Simulation of Hohmann Transfer Orbit**
+ ### **Simulation of Hohmann Transfer Orbit**
 ![alt text](<Hohmann Transfer Orbit Earth To Mars.png>)
 
 
