@@ -82,7 +82,13 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#4-computational-simulation-of-circular-orbits">4. Computational Simulation of Circular Orbits</a>
 <ul>
-<li class="toctree-l4"><a class="reference internal" href="#python-code-for-orbital-simulation-and-keplers-law-verification">Python Code for Orbital Simulation and Kepler’s Law Verification</a>
+<li class="toctree-l4"><a class="reference internal" href="#orbital-simulation-and-keplers-law-verification">Orbital Simulation and Kepler’s Law Verification</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#41-scatter-plot-of-t2-vs-r3-with-best-fit-line">4.1 Scatter Plot of \((T^2)\) vs. \((r^3)\) with Best-Fit Line</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#42-log-log-plot-of-t2-vs-r3">4.2 Log-Log Plot of \(T^2\) vs. \(r^3\)</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#43-circular-orbits-of-multiple-planets-at-different-radii">4.3️ Circular Orbits of Multiple Planets at Different Radii</a>
 </li>
 </ul>
 </li>
@@ -97,6 +103,12 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#6-conclusion-and-further-study">6. Conclusion and Further Study</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#whats-happening-in-the-plot">What's Happening in the Plot:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#key-points">Key Points:</a>
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -289,9 +301,19 @@ The simulation will:<br/>
 2. Simulate circular orbits using Newton’s Laws.<br/>
 3. Plot the relationship between <span class="arithmatex">\( T^2 \)</span> and <span class="arithmatex">\( r^3 \)</span>.  </p>
 <p>Let's implement this:  </p>
-<h3 id="python-code-for-orbital-simulation-and-keplers-law-verification"><strong>Python Code for Orbital Simulation and Kepler’s Law Verification</strong></h3>
-<p><img alt="alt text" src="../Kepler%27s%20Third%20Law%20Verification.png"/></p>
-<p>The plot confirms <strong>Kepler's Third Law</strong>: the relationship between <span class="arithmatex">\( T^2 \)</span> and <span class="arithmatex">\( r^3 \)</span> is linear, indicating that the orbital period squared is indeed proportional to the orbital radius cubed.</p>
+<h3 id="orbital-simulation-and-keplers-law-verification"><strong>Orbital Simulation and Kepler’s Law Verification</strong></h3>
+<h3 id="41-scatter-plot-of-t2-vs-r3-with-best-fit-line"><strong>4.1 Scatter Plot of <span class="arithmatex">\((T^2)\)</span> vs. <span class="arithmatex">\((r^3)\)</span> with Best-Fit Line</strong></h3>
+<p><img alt="alt text" src="Kepler's Third Law \(T^2\) Vs \(R^3\).png"/>
+- The <strong>linear trendline</strong> confirms that <span class="arithmatex">\((T^2)\)</span> is directly proportional to <span class="arithmatex">\((r^3)\)</span>.<br/>
+- This supports Kepler’s Third Law: <strong><span class="arithmatex">\((T^2 \propto r^3)\)</span></strong>.</p>
+<h3 id="42-log-log-plot-of-t2-vs-r3"><strong>4.2 Log-Log Plot of <span class="arithmatex">\(T^2\)</span> vs. <span class="arithmatex">\(r^3\)</span></strong></h3>
+<p><img alt="alt text" src="../Log-Log%20Plot%20Of%20Kepler%27s%20Third%20Law.png"/>
+- This <strong>logarithmic transformation</strong> helps visualize power-law relationships.<br/>
+- The <strong>straight-line pattern</strong> confirms the proportionality.</p>
+<h3 id="43-circular-orbits-of-multiple-planets-at-different-radii"><strong>4.3️ Circular Orbits of Multiple Planets at Different Radii</strong></h3>
+<p><img alt="alt text" src="../Circular%20Orbits%20At%20Different%20Radii.png"/>
+- Each orbit represents a planet at increasing distances from the Sun.<br/>
+- According to Kepler’s Law, planets farther away have <strong>longer orbital periods</strong>.  </p>
 <hr/>
 <h2 id="5-discussion-on-extensions-and-real-world-cases"><strong>5. Discussion on Extensions and Real-World Cases</strong></h2>
 <h3 id="elliptical-orbits"><strong>Elliptical Orbits</strong></h3>
@@ -313,15 +335,23 @@ $$
 where <span class="arithmatex">\( M_1 \)</span> and <span class="arithmatex">\( M_2 \)</span> are the masses of the two orbiting bodies.</p>
 <hr/>
 <h2 id="6-conclusion-and-further-study"><strong>6. Conclusion and Further Study</strong></h2>
-<p>We derived Kepler’s Third Law, implemented a computational verification, and explored real-world implications. <strong>Next steps for further learning:</strong><br/>
-- Simulating <strong>elliptical orbits</strong> using Newton’s laws.<br/>
-- Studying the <strong>three-body problem</strong> for complex gravitational interactions.<br/>
-- Analyzing gravitational interactions in <strong>galaxies and star clusters</strong>.  </p>
-<p>This knowledge is foundational for <strong>space exploration, astrophysics, and planetary science</strong>!  </p>
-<p>Add visuals...
-1 Add tomorrow
-2 Add tomorrow
-3 Add tomorrow</p>
+<p>Kepler’s Third Law derived, implemented a computational verification, and explored real-world implications. This knowledge is foundational for space exploration, astrophysics, and planetary science!  </p>
+<hr/>
+<p>## <strong>Simulation of Hohmann Transfer Orbit</strong>
+<img alt="alt text" src="../Hohmann%20Transfer%20Orbit%20Earth%20To%20Mars.png"/></p>
+<h3 id="whats-happening-in-the-plot">What's Happening in the Plot:</h3>
+<ul>
+<li><strong>Blue dashed circle</strong>: Earth's orbit (1 AU from the Sun).</li>
+<li><strong>Red dashed circle</strong>: Mars' orbit (~1.524 AU).</li>
+<li><strong>Green arc</strong>: The <strong>Hohmann transfer path</strong>—the most energy-efficient trajectory to reach Mars.</li>
+<li><strong>Yellow dot</strong>: The Sun at the center of the Solar System.</li>
+</ul>
+<h3 id="key-points">Key Points:</h3>
+<ul>
+<li>The transfer orbit is <strong>elliptical</strong>, with <strong>perihelion</strong> at Earth's orbit and <strong>aphelion</strong> at Mars'.</li>
+<li>The simulation represents <strong>half of the elliptical orbit</strong>, which is the typical path a spacecraft takes to go from Earth to Mars.</li>
+</ul>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
