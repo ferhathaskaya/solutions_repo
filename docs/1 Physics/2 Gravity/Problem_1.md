@@ -95,7 +95,7 @@ Let's implement this:
 ### **Orbital Simulation and Kepler’s Law Verification**
 
 ### **4.1 Scatter Plot of $(T^2)$ vs. $(r^3)$ with Best-Fit Line** 
-![alt text](<Kepler's Third Law $T^2$ Vs $R^3$.png>)
+![alt text](<Kepler's Third Law $T^2$ Vs $R^3$ (2).png>)
 - The **linear trendline** confirms that $(T^2)$ is directly proportional to $(r^3)$.  
 - This supports Kepler’s Third Law: **$(T^2 \propto r^3)$**.
 
@@ -103,7 +103,7 @@ Let's implement this:
 ![alt text](<Log-Log Plot Of Kepler's Third Law.png>)
 - This **logarithmic transformation** helps visualize power-law relationships.  
 - The **straight-line pattern** confirms the proportionality.
-### **4.3️ Circular Orbits of Multiple Planets at Different Radii**  
+### **4.3 Circular Orbits of Multiple Planets at Different Radii**  
 ![alt text](<Circular Orbits At Different Radii.png>)
 - Each orbit represents a planet at increasing distances from the Sun.  
 - According to Kepler’s Law, planets farther away have **longer orbital periods**.  
