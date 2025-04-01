@@ -2,21 +2,21 @@
 ## **Escape Velocities and Cosmic Velocities**
 
 ### 1. Definitions & Physical Meaning
-- **First Cosmic Velocity (Orbital Velocity):**
+#### 1.1. **First Cosmic Velocity (Orbital Velocity):**
   - Minimum speed to achieve a stable circular orbit around a planet.
-- **Second Cosmic Velocity (Escape Velocity):**
+#### 1.2. **Second Cosmic Velocity (Escape Velocity):**
   - Minimum speed to escape a planet’s gravitational field without further propulsion.
-- **Third Cosmic Velocity (Interplanetary Escape):**
+#### 1.3. **Third Cosmic Velocity (Interstellar Escape):**
   - Minimum speed to leave the gravitational influence of the Sun (or star), starting from a planet.
 
-These are fundamental in planning:
+#### **These are fundamental in planning:**
 - Satellite launches
 - Interplanetary missions (e.g., to Mars, Jupiter)
 - Dreams of interstellar travel
 
 ### 2.  Mathematical Derivations
 
-#### a. First Cosmic Velocity $ v_1 $ (Orbital Speed)
+#### a. First Cosmic Velocity $v_1$ (Orbital Speed)
 Minimum speed to stay in circular orbit close to surface:
 $$
 v_1 = \sqrt{\frac{GM}{r}}
@@ -36,7 +36,7 @@ Speed to escape Sun’s gravity from Earth's orbit:
 $$
 v_3 = \sqrt{v_{esc,Sun}^2 + v_{planet-orbit}^2}
 $$
-Where:
+#### Where:
 - $$v_{esc,Sun} = \sqrt{\frac{2GM_{Sun}}{r_{orbit}}}$$
 - $$v_{planet-orbit} = \sqrt{\frac{GM_{Sun}}{r_{orbit}}}$$
 
@@ -73,17 +73,17 @@ Here are the **Cosmic Velocities** for **Earth**, **Mars**, and **Jupiter**.
 | **1st Cosmic** | Required for artificial satellites, space stations. Example: GPS, Starlink, ISS.|
 
 ![alt text](<1st Cosmic Velocity From Earth.png>)
-- (**Orbit**: The spacecraft keeps circling around the planet.)
+#### (**Orbit**: The spacecraft keeps circling around the planet.)
 
 | **2nd Cosmic** | Required for planetary missions, launching space probes beyond Earth.  Example: Moon Missions, Apollo missions, Mars rovers. |
 
 ![alt text](<2nd Cosmic Velocity From Earth.png>)
-- (**Escape**: The path shows a parabolic escape, the spacecraft is going fast enough to break free from Earth’s gravity.)
+#### (**Escape**: The path shows a parabolic escape, the spacecraft is going fast enough to break free from Earth’s gravity.)
 
 | **3rd Cosmic** | Required for interstellar missions. Example: Voyager 1 & 2 missions. |
 
 ![alt text](<3rd Cosmic Velocity From Earth.png>)
-- (**Solar System Escape**: A fast, hyperbolic escape trajectory; this craft will leave Earth and the entire Solar System.)
+#### (**Solar System Escape**: A fast, hyperbolic escape trajectory; this craft will leave Earth and the entire Solar System.)
 
 
 ### **Significance in Mission Planning**:
