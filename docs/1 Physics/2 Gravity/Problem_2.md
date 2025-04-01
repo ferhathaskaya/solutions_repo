@@ -18,12 +18,14 @@
 
 #### a. First Cosmic Velocity $v_1$ (Orbital Speed)
 Minimum speed to stay in circular orbit close to surface:
+
 $$
 v_1 = \sqrt{\frac{GM}{r}}
 $$
-- \(G\): Gravitational constant
-- \(M\): Mass of the planet
-- \(r\): Distance from the planet’s center
+
+- **\(G\)**: Gravitational constant
+- **\(M\)**: Mass of the planet
+- **\(r\)**: Distance from the planet’s center
 
 #### b. Second Cosmic Velocity $v_2$ (Escape Velocity)
 Minimum speed to break free from gravity:
