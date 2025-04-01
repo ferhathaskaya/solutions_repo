@@ -49,13 +49,80 @@ $$
 
 Here are the **Cosmic Velocities** for **Earth**, **Mars**, and **Jupiter**.
 
+
+###  **Earth**
+
+**Given**:  
+\( M = 5.972 \times 10^{24} \, \text{kg} \)  
+\( R = 6.371 \times 10^6 \, \text{m} \)  
+\( r_{\text{orbit}} = 1 \, \text{AU} = 1.496 \times 10^{11} \, \text{m} \)
+
+$$
+v_1 = \sqrt{\frac{6.674 \times 10^{-11} \cdot 5.972 \times 10^{24}}{6.371 \times 10^6}} \approx \boxed{7,910 \, \text{m/s}}
+$$
+
+$$
+v_2 = \sqrt{2} \cdot 7,910 \approx \boxed{11,186 \, \text{m/s}}
+$$
+
+$$
+v_3 = \sqrt{\frac{6.674 \times 10^{-11} \cdot 1.989 \times 10^{30}}{1.496 \times 10^{11}}} \approx \boxed{29,789 \, \text{m/s}}
+$$
+
+---
+
+###  **Mars**
+
+**Given**:  
+\( M = 6.39 \times 10^{23} \, \text{kg} \)  
+\( R = 3.3895 \times 10^6 \, \text{m} \)  
+\( r_{\text{orbit}} = 1.524 \, \text{AU} = 2.279 \times 10^{11} \, \text{m} \)
+
+$$
+v_1 = \sqrt{\frac{6.674 \times 10^{-11} \cdot 6.39 \times 10^{23}}{3.3895 \times 10^6}} \approx \boxed{3,547 \, \text{m/s}}
+$$
+
+$$
+v_2 = \sqrt{2} \cdot 3,547 \approx \boxed{5,016 \, \text{m/s}}
+$$
+
+$$
+v_3 = \sqrt{\frac{6.674 \times 10^{-11} \cdot 1.989 \times 10^{30}}{2.279 \times 10^{11}}} \approx \boxed{24,130 \, \text{m/s}}
+$$
+
+---
+
+###  **Jupiter**
+
+**Given**:  
+\( M = 1.898 \times 10^{27} \, \text{kg} \)  
+\( R = 6.9911 \times 10^7 \, \text{m} \)  
+\( r_{\text{orbit}} = 5.204 \, \text{AU} = 7.78 \times 10^{11} \, \text{m} \)
+
+$$
+v_1 = \sqrt{\frac{6.674 \times 10^{-11} \cdot 1.898 \times 10^{27}}{6.9911 \times 10^7}} \approx \boxed{42,568 \, \text{m/s}}
+$$
+
+$$
+v_2 = \sqrt{2} \cdot 42,568 \approx \boxed{60,200 \, \text{m/s}}
+$$
+
+$$
+v_3 = \sqrt{\frac{6.674 \times 10^{-11} \cdot 1.989 \times 10^{30}}{7.78 \times 10^{11}}} \approx \boxed{13,058 \, \text{m/s}}
+$$
+
+---
+
+
+**Cosmic Velocities Table**
+
 | Planet   | 1st Cosmic (Orbital) | 2nd Cosmic (Escape) | 3rd Cosmic (Solar Escape) |
 |----------|----------------------|----------------------|----------------------------|
 | **Earth**   | ~7.91 km/s               | ~11.19 km/s               | ~29.79 km/s                      |
-| **Mars**    | ~3.55 km/s               | ~5.02 km/s                | Not calculated                   |
-| **Jupiter** | ~42.57 km/s              | ~60.20 km/s               | Not calculated                   |
+| **Mars**    | ~3.55 km/s               | ~5.02 km/s                | ~24.13 km/s                   |
+| **Jupiter** | ~42.57 km/s              | ~60.20 km/s               |  ~13.05 km/s                   |
 
-> **Note**: The 3rd cosmic velocity is specific to Earth’s location in the Solar System. For Mars and Jupiter, we’d need to know their orbital parameters and recalculate accordingly.
+
 
 ### 4. **Graphical Representations of Cosmic Velocities**
 
