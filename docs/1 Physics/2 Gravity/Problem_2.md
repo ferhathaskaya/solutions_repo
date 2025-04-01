@@ -2,7 +2,9 @@
 ## **Escape Velocities and Cosmic Velocities**
 
 ### 1. Definitions & Physical Meaning
-#### 1.1. **First Cosmic Velocity (Orbital Velocity):**
+
+- **First Cosmic Velocity (Orbital Velocity):**
+
   - Minimum speed to achieve a stable circular orbit around a planet.
 #### 1.2. **Second Cosmic Velocity (Escape Velocity):**
   - Minimum speed to escape a planet’s gravitational field without further propulsion.
