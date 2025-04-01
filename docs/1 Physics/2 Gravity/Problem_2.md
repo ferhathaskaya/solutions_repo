@@ -126,7 +126,7 @@ $$
 
 ### 4. **Graphical Representations of Cosmic Velocities**
 
-![alt text](<Cosmic Velocities For Earth, Mars, And Jupiter-1.png>)
+![alt text](<Comparison Of 1st, 2nd, And 3rd Cosmic Velocities.png>)
 
 - **1st Cosmic Velocity (Orbit)**: Needed to stay in low orbit.
 
