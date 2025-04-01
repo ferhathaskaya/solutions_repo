@@ -45,7 +45,7 @@ $$
 
 ### 2.  Mathematical Derivations
 
-#### a. First Cosmic Velocity $v_1$ (Orbital Velocity)
+#### a. First Cosmic Velocity $v_1$
 Minimum speed to stay in circular orbit close to surface:
 
 $$
@@ -56,13 +56,13 @@ $$
 - **\(M\)**: Mass of the planet
 - **\(r\)**: Distance from the planet’s center
 
-#### b. Second Cosmic Velocity $v_2$ (Escape Velocity)
+#### b. Second Cosmic Velocity $v_2$
 Minimum speed to break free from gravity:
 $$
 v_2 = \sqrt{2} \cdot v_1 = \sqrt{\frac{2GM}{r}}
 $$
 
-#### c. Third Cosmic Velocity  $v_3$ (Solar System Escape)
+#### c. Third Cosmic Velocity  $v_3$
 Speed to escape Sun’s gravity from Earth's orbit:
 $$
 v_3 = \sqrt{v_{esc,Sun}^2 + v_{planet-orbit}^2}
