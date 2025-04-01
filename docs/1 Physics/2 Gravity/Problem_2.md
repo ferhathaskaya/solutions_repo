@@ -25,13 +25,13 @@ $$
 - \(M\): Mass of the planet
 - \(r\): Distance from the planet’s center
 
-#### b. Second Cosmic Velocity $ v_2 $ (Escape Velocity)
+#### b. Second Cosmic Velocity \(v_2\) (Escape Velocity)
 Minimum speed to break free from gravity:
 $$
 v_2 = \sqrt{2} \cdot v_1 = \sqrt{\frac{2GM}{r}}
 $$
 
-#### c. Third Cosmic Velocity $ v_3 $ (Solar System Escape)
+#### c. Third Cosmic Velocity  /(v_3/) (Solar System Escape)
 Speed to escape Sun’s gravity from Earth's orbit:
 $$
 v_3 = \sqrt{v_{esc,Sun}^2 + v_{planet-orbit}^2}
@@ -77,12 +77,16 @@ Here are the **Cosmic Velocities** for **Earth**, **Mars**, and **Jupiter**.
 
 - (**Orbit**: The spacecraft keeps circling around the planet.)
 
+| Velocity | Application |
+|----------|-------------|
 | **2nd Cosmic** | Required for planetary missions, launching space probes beyond Earth.  Example: Moon Missions, Apollo missions, Mars rovers. |
 
 ![alt text](<2nd Cosmic Velocity From Earth.png>)
 
 - (**Escape**: The path shows a parabolic escape, the spacecraft is going fast enough to break free from Earth’s gravity.)
 
+| Velocity | Application |
+|----------|-------------|
 | **3rd Cosmic** | Required for interstellar missions. Example: Voyager 1 & 2 missions. |
 
 ![alt text](<3rd Cosmic Velocity From Earth.png>)
