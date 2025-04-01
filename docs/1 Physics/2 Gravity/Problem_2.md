@@ -3,12 +3,11 @@
 
 ### 1. Definitions & Physical Meaning
 
-- **First Cosmic Velocity (Orbital Velocity):**
-
+#### a. **First Cosmic Velocity (Orbital Velocity):**
   - Minimum speed to achieve a stable circular orbit around a planet.
-#### 1.2. **Second Cosmic Velocity (Escape Velocity):**
+#### b. **Second Cosmic Velocity (Escape Velocity):**
   - Minimum speed to escape a planet’s gravitational field without further propulsion.
-#### 1.3. **Third Cosmic Velocity (Interstellar Escape):**
+#### c. **Third Cosmic Velocity (Interstellar Escape):**
   - Minimum speed to leave the gravitational influence of the Sun (or star), starting from a planet.
 
 #### **These are fundamental in planning:**
