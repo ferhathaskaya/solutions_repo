@@ -17,7 +17,7 @@
 
 ### 2.  Mathematical Derivations
 
-#### a. First Cosmic Velocity $v_1$ (Orbital Speed)
+#### a. First Cosmic Velocity $v_1$ (Orbital Velocity)
 Minimum speed to stay in circular orbit close to surface:
 
 $$
