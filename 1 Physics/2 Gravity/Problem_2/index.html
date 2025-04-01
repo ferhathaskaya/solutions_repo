@@ -66,12 +66,6 @@
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#3-calculations-for-earth-mars-and-jupiter">3. Calculations for Earth, Mars, and Jupiter</a>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#earth">Earth</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#mars">Mars</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#jupiter">Jupiter</a>
-</li>
 <li class="toctree-l4"><a class="reference internal" href="#4-graphical-representations-of-cosmic-velocities">4. Graphical Representations of Cosmic Velocities</a>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#5-relevance-in-space-exploration-and-applications">5. Relevance in Space Exploration and Applications</a>
@@ -195,25 +189,45 @@
 <div class="section" itemprop="articleBody">
 <h1 id="problem-2">Problem 2</h1>
 <h2 id="escape-velocities-and-cosmic-velocities"><strong>Escape Velocities and Cosmic Velocities</strong></h2>
+<p>Understanding how fast an object needs to go to stay in orbit, escape a planet, or leave the entire Solar System is fundamental in space exploration and mission design.</p>
+<hr/>
 <h3 id="1-definitions-physical-meaning">1. Definitions &amp; Physical Meaning</h3>
-<h4 id="a-first-cosmic-velocity-orbital-velocity">a. <strong>First Cosmic Velocity (Orbital Velocity):</strong></h4>
+<h4 id="a-first-cosmic-velocity-orbital-velocity"><strong>a. First Cosmic Velocity (Orbital Velocity)</strong></h4>
+<blockquote>
+<p><em>The minimum speed required to maintain a stable circular orbit close to the planet's surface.</em></p>
+</blockquote>
+<div class="arithmatex">\[
+v_1 = \sqrt{\frac{GM}{R}}
+\]</div>
 <ul>
-<li>Minimum speed to achieve a stable circular orbit around a planet.</li>
+<li>Used to place satellites into low Earth orbit (LEO).</li>
+<li>Example: ISS orbits at ~7.66 km/s around Earth.</li>
 </ul>
-<h4 id="b-second-cosmic-velocity-escape-velocity">b. <strong>Second Cosmic Velocity (Escape Velocity):</strong></h4>
+<hr/>
+<h4 id="b-second-cosmic-velocity-escape-velocity"><strong>b. Second Cosmic Velocity (Escape Velocity)</strong></h4>
+<blockquote>
+<p><em>The minimum speed needed to escape a planet’s gravity without further propulsion.</em></p>
+</blockquote>
+<div class="arithmatex">\[
+v_2 = \sqrt{2} \cdot v_1 = \sqrt{\frac{2GM}{R}}
+\]</div>
 <ul>
-<li>Minimum speed to escape a planet’s gravitational field without further propulsion.</li>
+<li>Used in missions to the Moon, Mars, etc.</li>
+<li>Example: Earth escape velocity is ~11.2 km/s.</li>
 </ul>
-<h4 id="c-third-cosmic-velocity-interstellar-escape">c. <strong>Third Cosmic Velocity (Interstellar Escape):</strong></h4>
+<hr/>
+<h4 id="c-third-cosmic-velocity-solar-escape-velocity"><strong>c. Third Cosmic Velocity (Solar Escape Velocity)</strong></h4>
+<blockquote>
+<p><em>The speed required to escape the gravitational influence of the Sun starting from a planet's orbit.</em></p>
+</blockquote>
+<div class="arithmatex">\[
+v_3 = \sqrt{\frac{GM_\odot}{r_{\text{orbit}}}}
+\]</div>
 <ul>
-<li>Minimum speed to leave the gravitational influence of the Sun (or star), starting from a planet.</li>
+<li>Needed for interstellar probes like Voyager 1.</li>
+<li>Lower at planets farther from the Sun (e.g., Jupiter).</li>
 </ul>
-<h4 id="these-are-fundamental-in-planning"><strong>These are fundamental in planning:</strong></h4>
-<ul>
-<li>Satellite launches</li>
-<li>Interplanetary missions (e.g., to Mars, Jupiter)</li>
-<li>Dreams of interstellar travel</li>
-</ul>
+<hr/>
 <h3 id="2-mathematical-derivations">2.  Mathematical Derivations</h3>
 <h4 id="a-first-cosmic-velocity-v_1-orbital-velocity">a. First Cosmic Velocity <span class="arithmatex">\(v_1\)</span> (Orbital Velocity)</h4>
 <p>Minimum speed to stay in circular orbit close to surface:</p>
@@ -247,52 +261,6 @@ $$</p>
 <hr/>
 <h3 id="3-calculations-for-earth-mars-and-jupiter"><strong>3. Calculations for Earth, Mars, and Jupiter</strong></h3>
 <p>Here are the <strong>Cosmic Velocities</strong> for <strong>Earth</strong>, <strong>Mars</strong>, and <strong>Jupiter</strong>.</p>
-<h3 id="earth"><strong>Earth</strong></h3>
-<p><strong>Given</strong>:<br/>
-<span class="arithmatex">\( M = 5.972 \times 10^{24} \, \text{kg} \)</span><br/>
-<span class="arithmatex">\( R = 6.371 \times 10^6 \, \text{m} \)</span><br/>
-<span class="arithmatex">\( r_{\text{orbit}} = 1 \, \text{AU} = 1.496 \times 10^{11} \, \text{m} \)</span></p>
-<div class="arithmatex">\[
-v_1 = \sqrt{\frac{6.674 \times 10^{-11} \cdot 5.972 \times 10^{24}}{6.371 \times 10^6}} \approx \boxed{7,910 \, \text{m/s}}
-\]</div>
-<div class="arithmatex">\[
-v_2 = \sqrt{2} \cdot 7,910 \approx \boxed{11,186 \, \text{m/s}}
-\]</div>
-<div class="arithmatex">\[
-v_3 = \sqrt{\frac{6.674 \times 10^{-11} \cdot 1.989 \times 10^{30}}{1.496 \times 10^{11}}} \approx \boxed{29,789 \, \text{m/s}}
-\]</div>
-<hr/>
-<h3 id="mars"><strong>Mars</strong></h3>
-<p><strong>Given</strong>:<br/>
-<span class="arithmatex">\( M = 6.39 \times 10^{23} \, \text{kg} \)</span><br/>
-<span class="arithmatex">\( R = 3.3895 \times 10^6 \, \text{m} \)</span><br/>
-<span class="arithmatex">\( r_{\text{orbit}} = 1.524 \, \text{AU} = 2.279 \times 10^{11} \, \text{m} \)</span></p>
-<div class="arithmatex">\[
-v_1 = \sqrt{\frac{6.674 \times 10^{-11} \cdot 6.39 \times 10^{23}}{3.3895 \times 10^6}} \approx \boxed{3,547 \, \text{m/s}}
-\]</div>
-<div class="arithmatex">\[
-v_2 = \sqrt{2} \cdot 3,547 \approx \boxed{5,016 \, \text{m/s}}
-\]</div>
-<div class="arithmatex">\[
-v_3 = \sqrt{\frac{6.674 \times 10^{-11} \cdot 1.989 \times 10^{30}}{2.279 \times 10^{11}}} \approx \boxed{24,130 \, \text{m/s}}
-\]</div>
-<hr/>
-<h3 id="jupiter"><strong>Jupiter</strong></h3>
-<p><strong>Given</strong>:<br/>
-<span class="arithmatex">\( M = 1.898 \times 10^{27} \, \text{kg} \)</span><br/>
-<span class="arithmatex">\( R = 6.9911 \times 10^7 \, \text{m} \)</span><br/>
-<span class="arithmatex">\( r_{\text{orbit}} = 5.204 \, \text{AU} = 7.78 \times 10^{11} \, \text{m} \)</span></p>
-<div class="arithmatex">\[
-v_1 = \sqrt{\frac{6.674 \times 10^{-11} \cdot 1.898 \times 10^{27}}{6.9911 \times 10^7}} \approx \boxed{42,568 \, \text{m/s}}
-\]</div>
-<div class="arithmatex">\[
-v_2 = \sqrt{2} \cdot 42,568 \approx \boxed{60,200 \, \text{m/s}}
-\]</div>
-<div class="arithmatex">\[
-v_3 = \sqrt{\frac{6.674 \times 10^{-11} \cdot 1.989 \times 10^{30}}{7.78 \times 10^{11}}} \approx \boxed{13,058 \, \text{m/s}}
-\]</div>
-<hr/>
-<p><strong>Cosmic Velocities Table</strong></p>
 <table>
 <thead>
 <tr>
