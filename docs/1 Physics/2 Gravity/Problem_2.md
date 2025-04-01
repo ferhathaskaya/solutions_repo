@@ -40,14 +40,9 @@ Where:
 - $$v_{esc,Sun} = \sqrt{\frac{2GM_{Sun}}{r_{orbit}}}$$
 - $$v_{planet-orbit} = \sqrt{\frac{GM_{Sun}}{r_{orbit}}}$$
 
-### 3.  Relevance in Space Exploration and Applications
-- **v₁**: Required for artificial satellites, space stations (e.g., GPS, Starlink).
-- **v₂**: Launching space probes beyond Earth. Required for planetary missions (e.g., Moon, Mars).
-- **v₃**: Required for interstellar missions (e.g., Voyager 1 & 2, future interstellar travel).
-
 ---
 
-### 4. Calculations for Earth, Mars, and Jupiter
+### **3. Calculations for Earth, Mars, and Jupiter**
 
 Here are the **Cosmic Velocities** for **Earth**, **Mars**, and **Jupiter**.
 
@@ -59,13 +54,41 @@ Here are the **Cosmic Velocities** for **Earth**, **Mars**, and **Jupiter**.
 
 > **Note**: The 3rd cosmic velocity is specific to Earth’s location in the Solar System. For Mars and Jupiter, we’d need to know their orbital parameters and recalculate accordingly.
 
+### 4. **Graphical Representations of Cosmic Velocities**
+
 ![alt text](<Cosmic Velocities For Earth, Mars, And Jupiter-1.png>)
+- **1st Cosmic Velocity (Orbit)**: Needed to stay in low orbit.
 
+- **2nd Cosmic Velocity (Escape)**: Needed to break free from gravity.
+
+- **3rd Cosmic Velocity (Solar Escape)**: Only shown for Earth in this case — needed to escape the Solar System.
 
 ---
 
-### 5.
+###  **5. Relevance in Space Exploration and Applications**
 
 
----
+| Velocity | Application |
+|----------|-------------|
+| **1st Cosmic** | Required for artificial satellites, space stations. Example: GPS, Starlink, ISS.|
+
+![alt text](<1st Cosmic Velocity From Earth.png>)
+- (**Orbit**: The spacecraft keeps circling around the planet.)
+
+| **2nd Cosmic** | Required for planetary missions, launching space probes beyond Earth.  Example: Moon Missions, Apollo missions, Mars rovers. |
+
+![alt text](<2nd Cosmic Velocity From Earth.png>)
+- (**Escape**: The path shows a parabolic escape, the spacecraft is going fast enough to break free from Earth’s gravity.)
+
+| **3rd Cosmic** | Required for interstellar missions. Example: Voyager 1 & 2 missions. |
+
+![alt text](<3rd Cosmic Velocity From Earth.png>)
+- (**Solar System Escape**: A fast, hyperbolic escape trajectory; this craft will leave Earth and the entire Solar System.)
+
+
+### **Significance in Mission Planning**:
+- Determines **fuel requirements** and **launch energy**.
+- Affects **rocket design**, **payload mass**, and **mission duration**.
+- Vital for **interplanetary and interstellar travel**.
+
 
