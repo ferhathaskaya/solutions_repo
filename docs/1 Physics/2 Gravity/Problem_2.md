@@ -1,19 +1,47 @@
 # Problem 2
-## **Escape Velocities and Cosmic Velocities**
+##  **Escape Velocities and Cosmic Velocities**
 
-### 1. Definitions & Physical Meaning
+Understanding how fast an object needs to go to stay in orbit, escape a planet, or leave the entire Solar System is fundamental in space exploration and mission design.
 
-#### a. **First Cosmic Velocity (Orbital Velocity):**
-  - Minimum speed to achieve a stable circular orbit around a planet.
-#### b. **Second Cosmic Velocity (Escape Velocity):**
-  - Minimum speed to escape a planet’s gravitational field without further propulsion.
-#### c. **Third Cosmic Velocity (Interstellar Escape):**
-  - Minimum speed to leave the gravitational influence of the Sun (or star), starting from a planet.
+---
 
-#### **These are fundamental in planning:**
-- Satellite launches
-- Interplanetary missions (e.g., to Mars, Jupiter)
-- Dreams of interstellar travel
+###  1. Definitions & Physical Meaning
+
+####  **a. First Cosmic Velocity (Orbital Velocity)**  
+> *The minimum speed required to maintain a stable circular orbit close to the planet's surface.*
+
+$$
+v_1 = \sqrt{\frac{GM}{R}}
+$$
+
+- Used to place satellites into low Earth orbit (LEO).
+- Example: ISS orbits at ~7.66 km/s around Earth.
+
+---
+
+####  **b. Second Cosmic Velocity (Escape Velocity)**  
+> *The minimum speed needed to escape a planet’s gravity without further propulsion.*
+
+$$
+v_2 = \sqrt{2} \cdot v_1 = \sqrt{\frac{2GM}{R}}
+$$
+
+- Used in missions to the Moon, Mars, etc.
+- Example: Earth escape velocity is ~11.2 km/s.
+
+---
+
+####  **c. Third Cosmic Velocity (Solar Escape Velocity)**  
+> *The speed required to escape the gravitational influence of the Sun starting from a planet's orbit.*
+
+$$
+v_3 = \sqrt{\frac{GM_\odot}{r_{\text{orbit}}}}
+$$
+
+- Needed for interstellar probes like Voyager 1.
+- Lower at planets farther from the Sun (e.g., Jupiter).
+
+---
 
 ### 2.  Mathematical Derivations
 
@@ -50,71 +78,6 @@ $$
 Here are the **Cosmic Velocities** for **Earth**, **Mars**, and **Jupiter**.
 
 
-###  **Earth**
-
-**Given**:  
-\( M = 5.972 \times 10^{24} \, \text{kg} \)  
-\( R = 6.371 \times 10^6 \, \text{m} \)  
-\( r_{\text{orbit}} = 1 \, \text{AU} = 1.496 \times 10^{11} \, \text{m} \)
-
-$$
-v_1 = \sqrt{\frac{6.674 \times 10^{-11} \cdot 5.972 \times 10^{24}}{6.371 \times 10^6}} \approx \boxed{7,910 \, \text{m/s}}
-$$
-
-$$
-v_2 = \sqrt{2} \cdot 7,910 \approx \boxed{11,186 \, \text{m/s}}
-$$
-
-$$
-v_3 = \sqrt{\frac{6.674 \times 10^{-11} \cdot 1.989 \times 10^{30}}{1.496 \times 10^{11}}} \approx \boxed{29,789 \, \text{m/s}}
-$$
-
----
-
-###  **Mars**
-
-**Given**:  
-\( M = 6.39 \times 10^{23} \, \text{kg} \)  
-\( R = 3.3895 \times 10^6 \, \text{m} \)  
-\( r_{\text{orbit}} = 1.524 \, \text{AU} = 2.279 \times 10^{11} \, \text{m} \)
-
-$$
-v_1 = \sqrt{\frac{6.674 \times 10^{-11} \cdot 6.39 \times 10^{23}}{3.3895 \times 10^6}} \approx \boxed{3,547 \, \text{m/s}}
-$$
-
-$$
-v_2 = \sqrt{2} \cdot 3,547 \approx \boxed{5,016 \, \text{m/s}}
-$$
-
-$$
-v_3 = \sqrt{\frac{6.674 \times 10^{-11} \cdot 1.989 \times 10^{30}}{2.279 \times 10^{11}}} \approx \boxed{24,130 \, \text{m/s}}
-$$
-
----
-
-###  **Jupiter**
-
-**Given**:  
-\( M = 1.898 \times 10^{27} \, \text{kg} \)  
-\( R = 6.9911 \times 10^7 \, \text{m} \)  
-\( r_{\text{orbit}} = 5.204 \, \text{AU} = 7.78 \times 10^{11} \, \text{m} \)
-
-$$
-v_1 = \sqrt{\frac{6.674 \times 10^{-11} \cdot 1.898 \times 10^{27}}{6.9911 \times 10^7}} \approx \boxed{42,568 \, \text{m/s}}
-$$
-
-$$
-v_2 = \sqrt{2} \cdot 42,568 \approx \boxed{60,200 \, \text{m/s}}
-$$
-
-$$
-v_3 = \sqrt{\frac{6.674 \times 10^{-11} \cdot 1.989 \times 10^{30}}{7.78 \times 10^{11}}} \approx \boxed{13,058 \, \text{m/s}}
-$$
-
----
-
-
-**Cosmic Velocities Table**
 
 | Planet   | 1st Cosmic (Orbital) | 2nd Cosmic (Escape) | 3rd Cosmic (Solar Escape) |
 |----------|----------------------|----------------------|----------------------------|
