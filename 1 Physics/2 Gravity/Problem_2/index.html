@@ -58,6 +58,20 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#escape-velocities-and-cosmic-velocities">Escape Velocities and Cosmic Velocities</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#1-definitions-physical-meaning">1. Definitions &amp; Physical Meaning</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#2-mathematical-derivations">2. Mathematical Derivations</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#3-relevance-in-space-exploration-and-applications">3. Relevance in Space Exploration and Applications</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#4-calculations-for-earth-mars-and-jupiter">4. Calculations for Earth, Mars, and Jupiter</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#5">5.</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_3/">Problem 3</a>
@@ -172,6 +186,88 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-2">Problem 2</h1>
+<h2 id="escape-velocities-and-cosmic-velocities"><strong>Escape Velocities and Cosmic Velocities</strong></h2>
+<h3 id="1-definitions-physical-meaning">1. Definitions &amp; Physical Meaning</h3>
+<ul>
+<li><strong>First Cosmic Velocity (Orbital Velocity):</strong></li>
+<li>Minimum speed to achieve a stable circular orbit around a planet.</li>
+<li><strong>Second Cosmic Velocity (Escape Velocity):</strong></li>
+<li>Minimum speed to escape a planet’s gravitational field without further propulsion.</li>
+<li><strong>Third Cosmic Velocity (Interplanetary Escape):</strong></li>
+<li>Minimum speed to leave the gravitational influence of the Sun (or star), starting from a planet.</li>
+</ul>
+<p>These are fundamental in planning:
+- Satellite launches
+- Interplanetary missions (e.g., to Mars, Jupiter)
+- Dreams of interstellar travel</p>
+<h3 id="2-mathematical-derivations">2.  Mathematical Derivations</h3>
+<h4 id="a-first-cosmic-velocity-v_1-orbital-speed">a. First Cosmic Velocity $ v_1 $ (Orbital Speed)</h4>
+<p>Minimum speed to stay in circular orbit close to surface:
+$$
+v_1 = \sqrt{\frac{GM}{r}}
+$$
+- <span class="arithmatex">\(G\)</span>: Gravitational constant
+- <span class="arithmatex">\(M\)</span>: Mass of the planet
+- <span class="arithmatex">\(r\)</span>: Distance from the planet’s center</p>
+<h4 id="b-second-cosmic-velocity-v_2-escape-velocity">b. Second Cosmic Velocity $ v_2 $ (Escape Velocity)</h4>
+<p>Minimum speed to break free from gravity:
+$$
+v_2 = \sqrt{2} \cdot v_1 = \sqrt{\frac{2GM}{r}}
+$$</p>
+<h4 id="c-third-cosmic-velocity-v_3-solar-system-escape">c. Third Cosmic Velocity $ v_3 $ (Solar System Escape)</h4>
+<p>Speed to escape Sun’s gravity from Earth's orbit:
+$$
+v_3 = \sqrt{v_{esc,Sun}^2 + v_{planet-orbit}^2}
+$$
+Where:
+- <span class="arithmatex">\(<span class="arithmatex">\(v_{esc,Sun} = \sqrt{\frac{2GM_{Sun}}{r_{orbit}}}\)</span>\)</span>
+- <span class="arithmatex">\(<span class="arithmatex">\(v_{planet-orbit} = \sqrt{\frac{GM_{Sun}}{r_{orbit}}}\)</span>\)</span></p>
+<h3 id="3-relevance-in-space-exploration-and-applications">3.  Relevance in Space Exploration and Applications</h3>
+<ul>
+<li><strong>v₁</strong>: Required for artificial satellites, space stations (e.g., GPS, Starlink).</li>
+<li><strong>v₂</strong>: Launching space probes beyond Earth. Required for planetary missions (e.g., Moon, Mars).</li>
+<li><strong>v₃</strong>: Required for interstellar missions (e.g., Voyager 1 &amp; 2, future interstellar travel).</li>
+</ul>
+<hr/>
+<h3 id="4-calculations-for-earth-mars-and-jupiter">4. Calculations for Earth, Mars, and Jupiter</h3>
+<p>Here are the <strong>Cosmic Velocities</strong> for <strong>Earth</strong>, <strong>Mars</strong>, and <strong>Jupiter</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Planet</th>
+<th>1st Cosmic (Orbital)</th>
+<th>2nd Cosmic (Escape)</th>
+<th>3rd Cosmic (Solar Escape)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Earth</strong></td>
+<td>~7.91 km/s</td>
+<td>~11.19 km/s</td>
+<td>~29.79 km/s</td>
+</tr>
+<tr>
+<td><strong>Mars</strong></td>
+<td>~3.55 km/s</td>
+<td>~5.02 km/s</td>
+<td>Not calculated</td>
+</tr>
+<tr>
+<td><strong>Jupiter</strong></td>
+<td>~42.57 km/s</td>
+<td>~60.20 km/s</td>
+<td>Not calculated</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note</strong>: The 3rd cosmic velocity is specific to Earth’s location in the Solar System. For Mars and Jupiter, we’d need to know their orbital parameters and recalculate accordingly.</p>
+</blockquote>
+<p><img alt="alt text" src="../Cosmic%20Velocities%20For%20Earth%2C%20Mars%2C%20And%20Jupiter-1.png"/></p>
+<hr/>
+<h3 id="5">5.</h3>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
