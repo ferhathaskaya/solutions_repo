@@ -35,9 +35,9 @@ $$
 
 **Where:**
 
-- \( G \): Gravitational constant  \( = 6.674 \times 10^{-11} \, \text{N·m}^2/\text{kg}^2 \)
+- \( G \): Gravitational constant  \(  (6.674 \times 10^{-11} \, \text{N·m}^2/\text{kg}^2) \)
 
-- \( M \): Mass of the Earth  \( = 5.972 \times 10^{24} \, \text{kg} \)
+- \( M \): Mass of the Earth  \( ( 5.972 \times 10^{24} \, \text{kg}) \)
 
 - \( m \): Mass of the payload
 
