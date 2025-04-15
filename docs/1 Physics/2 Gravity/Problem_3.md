@@ -334,7 +334,7 @@ This implementation is used for all comparisons shown in the plots. The velocity
 
 ![alt text](<Velocity-Based Trajectories (300 Km Altitude, 90° Angle) (2).png>)
 
-## Velocity Comparisons
+**Velocity Comparisons**
 
 Here, we fix the **altitude to 300 km** and **launch angle to 90°**, and vary the **initial speed**.
 
