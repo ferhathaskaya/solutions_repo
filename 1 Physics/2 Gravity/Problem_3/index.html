@@ -484,8 +484,8 @@ import numpy as np
 </code></pre>
 </details>
 <p><strong>Velocity Comparison</strong></p>
-<p><img alt="alt text" src="../Velocity-Based%20Trajectories%20%28300%20Km%20Altitude%2C%2090%C2%B0%20Angle%29%20%282%29.png"/>
-Here, we fix the altitude to 300 km and launch angle to 90°, and vary the initial speed.
+<p><img alt="alt text" src="../Velocity-Based%20Trajectories%20%28300%20Km%20Altitude%2C%2090%C2%B0%20Angle%29%20%282%29.png"/></p>
+<p>Here, we fix the altitude to 300 km and launch angle to 90°, and vary the initial speed.
 | <strong>Speed (km/s)</strong> | <strong>Resulting Orbit Type</strong> <br/>
   |
 | ---------------- | ------------------------------- |
@@ -538,41 +538,46 @@ Here, we fix the altitude to 300 km and launch angle to 90°, and vary the initi
 </ul>
 <p><strong>Angle Comparison</strong></p>
 <p><img alt="alt text" src="../Angle-Based%20Trajectories%20%28300%20Km%20Altitude%2C%20Speed%20%3D%207.7%20KmS%29.png"/></p>
-<p>Here, we fix the <strong>altitude to 300 km</strong> and <strong>speed to 7.7 km/s</strong>, and vary the <strong>launch angle</strong> from horizontal (0°) to vertical (90°) and beyond.</p>
+<p>Here, we fix the <strong>altitude to 300 km</strong> and <strong>launch angle to 90°</strong>, and vary the <strong>initial speed</strong>.</p>
 <table>
 <thead>
 <tr>
-<th><strong>Angle (°)</strong></th>
+<th><strong>Speed (km/s)</strong></th>
 <th><strong>Resulting Orbit Type</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>0</td>
-<td>Skimming trajectory, reentry likely</td>
+<td>3.0</td>
+<td>Immediate reentry</td>
 </tr>
 <tr>
-<td>30</td>
-<td>Low arc, short elliptical path</td>
+<td>4.0</td>
+<td>Suborbital, falls back to Earth</td>
 </tr>
 <tr>
-<td>45</td>
-<td>Optimal for range, stable ellipse</td>
+<td>6.0</td>
+<td>Partial orbit, returns</td>
 </tr>
 <tr>
-<td>60</td>
-<td>Higher arc, longer orbit</td>
+<td>7.7</td>
+<td>Circular or elliptical orbit</td>
 </tr>
 <tr>
-<td>90</td>
-<td>High-altitude ellipse or circular</td>
+<td>9.0</td>
+<td>Elongated elliptical orbit</td>
 </tr>
 <tr>
-<td>120</td>
-<td>Retrograde-like arc, steep reentry</td>
+<td>11.2</td>
+<td>Parabolic escape</td>
+</tr>
+<tr>
+<td>13.0</td>
+<td>Hyperbolic escape</td>
 </tr>
 </tbody>
 </table>
+<p>This table illustrates how increasing speed increases orbital range and determines escape conditions.</p>
 <p>This comparison shows how the launch direction affects orbital characteristics and stability even at the same speed and altitude</p>
 <ul>
 <li>All payloads are released from 300 km altitude at <strong>7.7 km/s</strong>, but with varying angles.</li>
