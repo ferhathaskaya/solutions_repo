@@ -63,10 +63,9 @@ $$
 
 ##  3. Implementation 
 
-<details>
-    <summary>Click to expand Python code for trajectory simulation and plotting</summary>
+<<details>
+<summary>Click to expand Python code for trajectory simulation and plotting</summary>
 
-    ```python
     import numpy as np
     import matplotlib.pyplot as plt
 
@@ -136,8 +135,8 @@ $$
     plt.tight_layout()
     plt.show()
 
-
 </details>
+
 
 ###  **Simulation Result: Payload Trajectories Near Earth**
 
@@ -348,5 +347,5 @@ This comparison shows how the launch direction affects orbital characteristics a
   - **45°–90°** create stable orbits.
   - **120°** launches the payload backward into a steep downward arc.
 
-
+11
 
