@@ -249,9 +249,9 @@ $$</li>
 <hr/>
 <h2 id="3-implementation">3. Implementation</h2>
 <details>
-<summary>Click to expand Python code for trajectory simulation and plotting</summary>
-
-    import numpy as np
+<summary>Click to expand full simulation code for velocity, altitude, and angle comparisons</summary>
+<pre><code>
+import numpy as np
     import matplotlib.pyplot as plt
 
     # Constants
@@ -320,6 +320,7 @@ $$</li>
     plt.tight_layout()
     plt.show()
 
+</code></pre>
 </details>
 <h3 id="simulation-result-payload-trajectories-near-earth"><strong>Simulation Result: Payload Trajectories Near Earth</strong></h3>
 <p><img alt="alt text" src="../Comparison%20Of%20Payload%20Trajectories%20At%20Different%20Velocities.png"/></p>
@@ -485,7 +486,8 @@ $$</li>
 <p><strong>Velocity Comparison</strong></p>
 <p><img alt="alt text" src="../Velocity-Based%20Trajectories%20%28300%20Km%20Altitude%2C%2090%C2%B0%20Angle%29%20%282%29.png"/>
 Here, we fix the altitude to 300 km and launch angle to 90°, and vary the initial speed.
-| <strong>Speed (km/s)</strong> | <strong>Resulting Orbit Type</strong>        |
+| <strong>Speed (km/s)</strong> | <strong>Resulting Orbit Type</strong> <br/>
+  |
 | ---------------- | ------------------------------- |
 | 3.0              | Immediate reentry               |
 | 4.0              | Suborbital, falls back to Earth |
@@ -579,7 +581,6 @@ Here, we fix the altitude to 300 km and launch angle to 90°, and vary the initi
 <li><strong>45°–90°</strong> create stable orbits.</li>
 <li><strong>120°</strong> launches the payload backward into a steep downward arc.</li>
 </ul>
-<p>4</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
