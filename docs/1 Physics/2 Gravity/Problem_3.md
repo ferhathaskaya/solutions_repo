@@ -12,16 +12,28 @@ The resulting path may be **orbital (elliptical), parabolic, hyperbolic, or reen
 
 When a payload is released from a moving rocket near Earth, its path is determined by **Newton’s Law of Universal Gravitation** and its **initial velocity vector**.
 
-### **Newton’s Law of Gravitation**
+### Newton’s Law of Gravitation
+
+The gravitational force between two masses is given by:
+
 $$
-\vec{F} = - \frac{GMm}{r^2} \hat{r}
+\vec{F} = - \frac{GMm}{r^2} \, \hat{r}
 $$
-Where:
-- \( G \) = gravitational constant \( (6.674 \times 10^{-11} \, \text{Nm}^2/\text{kg}^2) \)
-- \( M \) = mass of Earth \( (5.972 \times 10^{24} \, \text{kg}) \)
-- \( m \) = mass of the payload
-- \( r \) = distance from Earth’s center to the payload
-- \( \hat{r} \) = unit vector in the radial direction
+
+**Where:**
+
+- \( G \): Gravitational constant  
+  \( = 6.674 \times 10^{-11} \, \text{N·m}^2/\text{kg}^2 \)
+
+- \( M \): Mass of the Earth  
+  \( = 5.972 \times 10^{24} \, \text{kg} \)
+
+- \( m \): Mass of the payload
+
+- \( r \): Distance from Earth's center to the payload
+
+- \( \hat{r} \): Unit vector pointing radially outward from Earth to the payload
+
 
 We use **Newton's Second Law** to derive the equation of motion:
 
@@ -49,13 +61,22 @@ Kepler’s Laws describe the motion of planets around the Sun and can be applied
 
 ---
 
-##  **2. Numerical Simulation of Trajectories**
+##  2. Numerical Simulation of Trajectories
 
-We'll simulate several types of trajectories based on initial conditions:
--**Elliptical Orbit**: \( v < v_{\text{esc}} \) but tangential
-- **Parabolic Escape**: \( v = v_{\text{esc}} \)
-- **Hyperbolic Trajectory**: \( v > v_{\text{esc}} \)
-- **Ballistic Reentry**: \( v < v_{\text{orb}} \)
+We simulate several types of trajectories based on the **initial speed and direction** of the payload:
+
+- **Elliptical Orbit**  
+  \( v < v_{\text{esc}} \) (sub-escape speed, tangential to surface)
+
+- **Parabolic Escape**  
+  \( v = v_{\text{esc}} \) (just enough speed to escape Earth’s gravity)
+
+- **Hyperbolic Trajectory**  
+  \( v > v_{\text{esc}} \) (excess speed; the object escapes on an open path)
+
+- **Ballistic Reentry**  
+  \( v < v_{\text{orb}} \) (too slow to maintain orbit, falls back to Earth)
+
 
 ###  Definitions
 - Escape Velocity:  
