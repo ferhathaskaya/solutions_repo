@@ -34,11 +34,19 @@ $$
 \frac{d^2\vec{r}}{dt^2} = - \frac{GM}{|\vec{r}|^3} \vec{r}
 $$
 
-### Kepler's Laws
-Kepler's Laws describe the motion of planets around the Sun but can be applied to any two-body problem:
-1. **Law of Orbits**: Planets move in elliptical orbits with the Sun at one focus.
-2. **Law of Areas**: A line joining a planet and the Sun sweeps out equal areas in equal intervals of time.
-3. **Law of Periods**: The square of the orbital period of a planet is proportional to the cube of the semi-major axis of its orbit.
+###  Kepler’s Laws
+
+Kepler’s Laws describe the motion of planets around the Sun and can be applied to any two-body orbital system:
+
+1. **Law of Orbits**  
+   > Planets move in **elliptical orbits** with the Sun at one focus.
+
+2. **Law of Areas**  
+   > A line joining a planet and the Sun sweeps out **equal areas** in **equal intervals of time**.
+
+3. **Law of Periods**  
+   > The square of a planet’s orbital period is **proportional to the cube** of the **semi-major axis** of its orbit.
+
 ---
 
 ##  **2. Numerical Simulation of Trajectories**
@@ -331,6 +339,7 @@ Here, we fix the **speed to 7.7 km/s** (near orbital speed) and vary the **altit
 | 300               | Stable low Earth orbit                    |
 | 500               | Broader elliptical orbit                  |
 | 1000              | Long-period elliptical orbit              |
+
 - As altitude increases (100 km → 1000 km), the orbits become wider and more stable.
 - All trajectories start at 90° angle with 7.7 km/s speed — showing how **altitude alone** influences the orbital shape and duration.
 
