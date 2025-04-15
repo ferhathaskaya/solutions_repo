@@ -396,8 +396,6 @@ Here, we fix the **altitude to 300 km** and **speed to 7.7 km/s**, and vary the 
 This comparison shows how the launch direction affects orbital characteristics and stability even at the same speed and altitude.
 
 
-This comparison shows how the launch direction affects orbital characteristics and stability even at the same speed and altitude
-
 - All payloads are released from 300 km altitude at **7.7 km/s**, but with varying angles.
 - You can see:
   - **0° (horizontal)** leads to near-surface skimming and reentry.
