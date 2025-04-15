@@ -167,6 +167,7 @@ This implementation is used for all comparisons shown in the plots. The velocity
 <details>
 <summary>Click to expand full simulation code for velocity, altitude, and angle comparisons</summary>
 
+<pre><code>
     import numpy as np
     import matplotlib.pyplot as plt
 
@@ -279,9 +280,9 @@ This implementation is used for all comparisons shown in the plots. The velocity
     plt.legend()
     plt.tight_layout()
     plt.show()
+</code></pre>
 
 </details>
-
 
 
 
@@ -348,4 +349,4 @@ This comparison shows how the launch direction affects orbital characteristics a
   - **45°–90°** create stable orbits.
   - **120°** launches the payload backward into a steep downward arc.
 
-3
+4
