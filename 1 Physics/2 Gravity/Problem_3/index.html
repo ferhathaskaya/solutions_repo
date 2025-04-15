@@ -66,7 +66,7 @@
 <ul>
 <li class="toctree-l4"><a class="reference internal" href="#newtons-law-of-gravitation">Newton’s Law of Gravitation</a>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#keplers-laws">Kepler's Laws</a>
+<li class="toctree-l4"><a class="reference internal" href="#keplers-laws">Kepler’s Laws</a>
 </li>
 </ul>
 </li>
@@ -225,11 +225,28 @@ Where:
 $$
 \frac{d^2\vec{r}}{dt^2} = - \frac{GM}{|\vec{r}|^3} \vec{r}
 $$</p>
-<h3 id="keplers-laws">Kepler's Laws</h3>
-<p>Kepler's Laws describe the motion of planets around the Sun but can be applied to any two-body problem:
-1. <strong>Law of Orbits</strong>: Planets move in elliptical orbits with the Sun at one focus.
-2. <strong>Law of Areas</strong>: A line joining a planet and the Sun sweeps out equal areas in equal intervals of time.
-3. <strong>Law of Periods</strong>: The square of the orbital period of a planet is proportional to the cube of the semi-major axis of its orbit.</p>
+<h3 id="keplers-laws">Kepler’s Laws</h3>
+<p>Kepler’s Laws describe the motion of planets around the Sun and can be applied to any two-body orbital system:</p>
+<ol>
+<li>
+<p><strong>Law of Orbits</strong> </p>
+<blockquote>
+<p>Planets move in <strong>elliptical orbits</strong> with the Sun at one focus.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Law of Areas</strong> </p>
+<blockquote>
+<p>A line joining a planet and the Sun sweeps out <strong>equal areas</strong> in <strong>equal intervals of time</strong>.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Law of Periods</strong> </p>
+<blockquote>
+<p>The square of a planet’s orbital period is <strong>proportional to the cube</strong> of the <strong>semi-major axis</strong> of its orbit.</p>
+</blockquote>
+</li>
+</ol>
 <hr/>
 <h2 id="2-numerical-simulation-of-trajectories"><strong>2. Numerical Simulation of Trajectories</strong></h2>
 <p>We'll simulate several types of trajectories based on initial conditions:
@@ -561,16 +578,12 @@ import numpy as np
 <td>1000</td>
 <td>Long-period elliptical orbit</td>
 </tr>
-<tr>
-<td>- As altitude increases (100 km → 1000 km), the orbits become wider and more stable.</td>
-<td></td>
-</tr>
-<tr>
-<td>- All trajectories start at 90° angle with 7.7 km/s speed — showing how <strong>altitude alone</strong> influences the orbital shape and duration.</td>
-<td></td>
-</tr>
 </tbody>
 </table>
+<ul>
+<li>As altitude increases (100 km → 1000 km), the orbits become wider and more stable.</li>
+<li>All trajectories start at 90° angle with 7.7 km/s speed — showing how <strong>altitude alone</strong> influences the orbital shape and duration.</li>
+</ul>
 <p><strong>Angle Comparison</strong></p>
 <p><img alt="alt text" src="../Angle-Based%20Trajectories%20%28300%20Km%20Altitude%2C%20Speed%20%3D%207.7%20KmS%29.png"/></p>
 <p>Here, we fix the <strong>altitude to 300 km</strong> and <strong>speed to 7.7 km/s</strong>, and vary the <strong>launch angle</strong> from horizontal (0°) to vertical (90°) and beyond.</p>
