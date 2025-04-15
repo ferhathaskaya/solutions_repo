@@ -1,16 +1,28 @@
 # Problem 3
+# Trajectories of a Freely Released Payload Near Earth
 
+When a payload is released from a rocket near Earth, its motion is influenced by two key factors:
+- **Gravitational attraction** from Earth
+- Its **initial velocity** and direction at the moment of release
 
-## **Trajectories of a Freely Released Payload Near Earth**
-When a payload is released from a rocket near Earth, its motion is governed by gravitational attraction and its initial velocity. 
+Depending on these conditions, the payload can follow different paths:
 
-The resulting path may be **orbital (elliptical), parabolic, hyperbolic, or reentry** depending on the initial conditions. 
+- **Orbital (Elliptical)**: bound motion around Earth  
+- **Parabolic**: just enough speed to escape Earth’s gravity  
+- **Hyperbolic**: exceeds escape speed, escaping rapidly  
+- **Reentry**: insufficient speed, falls back to Earth
 
+---
 
+## 📚 1. Theoretical Principles
 
-##  **1. Theoretical Principles**
+The motion of the payload is governed by:
 
-When a payload is released from a moving rocket near Earth, its path is determined by **Newton’s Law of Universal Gravitation** and its **initial velocity vector**.
+- **Newton’s Law of Universal Gravitation**
+- The **initial velocity vector** of the payload at release
+
+These determine whether the object enters orbit, escapes, or returns to Earth.
+
 
 ### Newton’s Law of Gravitation
 
