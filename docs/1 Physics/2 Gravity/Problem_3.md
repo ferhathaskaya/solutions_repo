@@ -63,85 +63,81 @@ $$
 
 ##  3. Implementation 
 
-```markdown
 <details>
-<summary>Click to expand Python code for trajectory simulation and plotting</summary>
+    <summary>Click to expand Python code for trajectory simulation and plotting</summary>
 
-```python
-import numpy as np
-import matplotlib.pyplot as plt
+    ```python
+    import numpy as np
+    import matplotlib.pyplot as plt
 
-# Constants
-G = 6.67430e-11       # gravitational constant (m^3/kg/s^2)
-M = 5.972e24          # mass of Earth (kg)
-R_earth = 6.371e6     # radius of Earth (m)
+    # Constants
+    G = 6.67430e-11       # gravitational constant (m^3/kg/s^2)
+    M = 5.972e24          # mass of Earth (kg)
+    R_earth = 6.371e6     # radius of Earth (m)
 
-# Time parameters
-dt = 1                # time step in seconds
-steps = 30000         # total number of steps (~8 hours)
+    # Time parameters
+    dt = 1                # time step in seconds
+    steps = 30000         # total number of steps (~8 hours)
 
-def simulate_trajectory(r0, v0):
-    r = np.array(r0, dtype=float)
-    v = np.array(v0, dtype=float)
-    
-    positions = [r.copy()]
-    
-    for _ in range(steps):
-        r_norm = np.linalg.norm(r)
-        a = -G * M * r / r_norm**3
-        r += v * dt + 0.5 * a * dt**2
-        a_new = -G * M * r / np.linalg.norm(r)**3
-        v += 0.5 * (a + a_new) * dt
-        positions.append(r.copy())
+    def simulate_trajectory(r0, v0):
+        r = np.array(r0, dtype=float)
+        v = np.array(v0, dtype=float)
         
-        if np.linalg.norm(r) < R_earth:
-            break  # hit the Earth
-    
-    return np.array(positions)
+        positions = [r.copy()]
+        
+        for _ in range(steps):
+            r_norm = np.linalg.norm(r)
+            a = -G * M * r / r_norm**3
+            r += v * dt + 0.5 * a * dt**2
+            a_new = -G * M * r / np.linalg.norm(r)**3
+            v += 0.5 * (a + a_new) * dt
+            positions.append(r.copy())
+            
+            if np.linalg.norm(r) < R_earth:
+                break  # hit the Earth
+        
+        return np.array(positions)
 
-# Initial position: 300 km above Earth
-altitude = 300e3
-r0 = np.array([R_earth + altitude, 0.0])
+    # Initial position: 300 km above Earth
+    altitude = 300e3
+    r0 = np.array([R_earth + altitude, 0.0])
 
-# Case 1: Low velocity (reentry)
-v_reentry = np.array([0.0, 3000.0])
+    # Case 1: Low velocity (reentry)
+    v_reentry = np.array([0.0, 3000.0])
 
-# Case 2: Circular orbital velocity
-v_orbit = np.array([0.0, np.sqrt(G * M / (R_earth + altitude))])
+    # Case 2: Circular orbital velocity
+    v_orbit = np.array([0.0, np.sqrt(G * M / (R_earth + altitude))])
 
-# Case 3: Escape velocity
-v_escape = np.array([0.0, np.sqrt(2 * G * M / (R_earth + altitude))])
+    # Case 3: Escape velocity
+    v_escape = np.array([0.0, np.sqrt(2 * G * M / (R_earth + altitude))])
 
-# Run simulations
-traj_reentry = simulate_trajectory(r0, v_reentry)
-traj_orbit = simulate_trajectory(r0, v_orbit)
-traj_escape = simulate_trajectory(r0, v_escape)
+    # Run simulations
+    traj_reentry = simulate_trajectory(r0, v_reentry)
+    traj_orbit = simulate_trajectory(r0, v_orbit)
+    traj_escape = simulate_trajectory(r0, v_escape)
 
-# Plotting
-plt.figure(figsize=(7, 7))
-theta = np.linspace(0, 2*np.pi, 500)
-earth_x = R_earth * np.cos(theta)
-earth_y = R_earth * np.sin(theta)
-plt.plot(earth_x, earth_y, color='black', label='Earth')
+    # Plotting
+    plt.figure(figsize=(7, 7))
+    theta = np.linspace(0, 2*np.pi, 500)
+    earth_x = R_earth * np.cos(theta)
+    earth_y = R_earth * np.sin(theta)
+    plt.plot(earth_x, earth_y, color='black', label='Earth')
 
-plt.plot(traj_reentry[:,0], traj_reentry[:,1], label='Reentry', linestyle='--')
-plt.plot(traj_orbit[:,0], traj_orbit[:,1], label='Orbital', linestyle='-')
-plt.plot(traj_escape[:,0], traj_escape[:,1], label='Escape', linestyle=':')
+    plt.plot(traj_reentry[:,0], traj_reentry[:,1], label='Reentry', linestyle='--')
+    plt.plot(traj_orbit[:,0], traj_orbit[:,1], label='Orbital', linestyle='-')
+    plt.plot(traj_escape[:,0], traj_escape[:,1], label='Escape', linestyle=':')
 
-plt.axis('equal')
-plt.xlabel('x (m)')
-plt.ylabel('y (m)')
-plt.title('Comparison of Payload Trajectories at Different Velocities')
-plt.legend()
-plt.grid(True)
-plt.tight_layout()
-plt.show()
-```
+    plt.axis('equal')
+    plt.xlabel('x (m)')
+    plt.ylabel('y (m)')
+    plt.title('Comparison of Payload Trajectories at Different Velocities')
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
+
 
 </details>
-
-
-
 
 ###  **Simulation Result: Payload Trajectories Near Earth**
 
@@ -163,4 +159,196 @@ Here's what you're seeing in the plot:
 - **Energy = 0** at escape velocity ⇒ parabolic path  
 - **Energy < 0** ⇒ elliptical or suborbital trajectory  
 - **Energy > 0** ⇒ hyperbolic trajectory
+
+##  4. Payload Trajectory Comparisons
+
+## Python Implementation for Trajectory Simulation and Visualization
+This implementation is used for all comparisons shown in the plots. The velocity, altitude, and angle parameters are varied to illustrate their effects on orbital behavior.
+
+
+<details>
+    <summary>Click to expand full simulation code for velocity, altitude, and angle comparisons</summary>
+
+    ```python
+    import numpy as np
+    import matplotlib.pyplot as plt
+
+    # Constants
+    G = 6.67430e-11       # gravitational constant (m^3/kg/s^2)
+    M = 5.972e24          # mass of Earth (kg)
+    R_earth = 6.371e6     # radius of Earth (m)
+    dt = 1                # time step (s)
+    steps = 30000         # number of integration steps
+
+    # Trajectory simulation function
+    def simulate_trajectory(r0, v0):
+        r = np.array(r0, dtype=float)
+        v = np.array(v0, dtype=float)
+        positions = [r.copy()]
+        for _ in range(steps):
+            r_norm = np.linalg.norm(r)
+            a = -G * M * r / r_norm**3
+            r += v * dt + 0.5 * a * dt**2
+            a_new = -G * M * r / np.linalg.norm(r)**3
+            v += 0.5 * (a + a_new) * dt
+            positions.append(r.copy())
+            if np.linalg.norm(r) < R_earth:
+                break  # impact with Earth
+        return np.array(positions)
+
+    # Earth outline for plotting
+    theta = np.linspace(0, 2 * np.pi, 500)
+    earth_x = R_earth * np.cos(theta)
+    earth_y = R_earth * np.sin(theta)
+
+    # --------------------
+    # Velocity Comparison
+    # --------------------
+    velocity_cases = {
+        "3.0 km/s": 3000,
+        "4.0 km/s": 4000,
+        "6.0 km/s": 6000,
+        "7.7 km/s": 7700,
+        "9.0 km/s": 9000,
+        "11.2 km/s": 11200,
+        "13.0 km/s": 13000
+    }
+    r0_velocity = np.array([R_earth + 300e3, 0.0])
+    velocity_trajectories = {}
+    for label, speed in velocity_cases.items():
+        v0 = [0, speed]
+        velocity_trajectories[label] = simulate_trajectory(r0_velocity, v0)
+
+    plt.figure(figsize=(8, 8))
+    plt.plot(earth_x / 1e3, earth_y / 1e3, 'k', label='Earth')
+    for label, traj in velocity_trajectories.items():
+        plt.plot(traj[:, 0] / 1e3, traj[:, 1] / 1e3, label=label)
+    plt.title("Velocity-Based Trajectories")
+    plt.xlabel("x (km)")
+    plt.ylabel("y (km)")
+    plt.axis('equal')
+    plt.grid(True)
+    plt.legend()
+    plt.tight_layout()
+    plt.show()
+
+    # --------------------
+    # Altitude Comparison
+    # --------------------
+    altitudes_km = [100, 300, 500, 1000]
+    altitude_trajectories = {}
+    speed = 7700
+    for alt in altitudes_km:
+        r0 = np.array([R_earth + alt * 1e3, 0.0])
+        v0 = [0, speed]
+        altitude_trajectories[f"{alt} km"] = simulate_trajectory(r0, v0)
+
+    plt.figure(figsize=(8, 8))
+    plt.plot(earth_x / 1e3, earth_y / 1e3, 'k', label='Earth')
+    for label, traj in altitude_trajectories.items():
+        plt.plot(traj[:, 0] / 1e3, traj[:, 1] / 1e3, label=label)
+    plt.title("Altitude-Based Trajectories")
+    plt.xlabel("x (km)")
+    plt.ylabel("y (km)")
+    plt.axis('equal')
+    plt.grid(True)
+    plt.legend()
+    plt.tight_layout()
+    plt.show()
+
+    # --------------------
+    # Angle Comparison
+    # --------------------
+    angles_deg = [0, 30, 45, 60, 90, 120]
+    angle_trajectories = {}
+    speed = 7700
+    r0_angle = np.array([R_earth + 300e3, 0.0])
+    for angle in angles_deg:
+        angle_rad = np.radians(angle)
+        vx = speed * np.cos(angle_rad)
+        vy = speed * np.sin(angle_rad)
+        v0 = [vx, vy]
+        angle_trajectories[f"{angle}°"] = simulate_trajectory(r0_angle, v0)
+
+    plt.figure(figsize=(8, 8))
+    plt.plot(earth_x / 1e3, earth_y / 1e3, 'k', label='Earth')
+    for label, traj in angle_trajectories.items():
+        plt.plot(traj[:, 0] / 1e3, traj[:, 1] / 1e3, label=label)
+    plt.title("Angle-Based Trajectories")
+    plt.xlabel("x (km)")
+    plt.ylabel("y (km)")
+    plt.axis('equal')
+    plt.grid(True)
+    plt.legend()
+    plt.tight_layout()
+    plt.show()
+    ```
+
+</details>
+
+
+**Velocity Comparison**
+
+![alt text](<Velocity-Based Trajectories (300 Km Altitude, 90° Angle) (2).png>)
+Here, we fix the altitude to 300 km and launch angle to 90°, and vary the initial speed.
+| **Speed (km/s)** | **Resulting Orbit Type**        |
+| ---------------- | ------------------------------- |
+| 3.0              | Immediate reentry               |
+| 4.0              | Suborbital, falls back to Earth |
+| 6.0              | Partial orbit, returns          |
+| 7.7              | Circular or elliptical orbit    |
+| 9.0              | Elongated elliptical orbit      |
+| 11.2             | Parabolic escape                |
+| 13.0             | Hyperbolic escape               |
+
+This table illustrates how increasing speed increases orbital range and determines escape conditions.
+
+Showing how different initial speeds at 300 km altitude (launched vertically) affect the trajectory:
+
+- Low speeds (3–4 km/s): reentry
+- Medium speeds (6–9 km/s): elliptical orbits
+- High speeds (11.2+ km/s): escape trajectories
+
+
+
+**Altitude Comparison**
+
+![alt text](<Altitude-Based Trajectories (Speed = 7.7 KmS, 90° Angle).png>)
+
+Here, we fix the **speed to 7.7 km/s** (near orbital speed) and vary the **altitude**. Launch angle is kept at 90°.
+
+| **Altitude (km)** | **Resulting Orbit**                       |
+| ----------------- | ----------------------------------------- |
+| 100               | Smaller elliptical orbit, lower stability |
+| 300               | Stable low Earth orbit                    |
+| 500               | Broader elliptical orbit                  |
+| 1000              | Long-period elliptical orbit              |
+
+- As altitude increases (100 km → 1000 km), the orbits become wider and more stable.
+- All trajectories start at 90° angle with 7.7 km/s speed — showing how **altitude alone** influences the orbital shape and duration.
+
+**Angle Comparison**
+
+![alt text](<Angle-Based Trajectories (300 Km Altitude, Speed = 7.7 KmS).png>)
+
+Here, we fix the **altitude to 300 km** and **speed to 7.7 km/s**, and vary the **launch angle** from horizontal (0°) to vertical (90°) and beyond.
+
+| **Angle (°)** | **Resulting Orbit Type**            |
+| ------------- | ----------------------------------- |
+| 0             | Skimming trajectory, reentry likely |
+| 30            | Low arc, short elliptical path      |
+| 45            | Optimal for range, stable ellipse   |
+| 60            | Higher arc, longer orbit            |
+| 90            | High-altitude ellipse or circular   |
+| 120           | Retrograde-like arc, steep reentry  |
+
+This comparison shows how the launch direction affects orbital characteristics and stability even at the same speed and altitude
+
+- All payloads are released from 300 km altitude at **7.7 km/s**, but with varying angles.
+- You can see:
+  - **0° (horizontal)** leads to near-surface skimming and reentry.
+  - **45°–90°** create stable orbits.
+  - **120°** launches the payload backward into a steep downward arc.
+
+
 
