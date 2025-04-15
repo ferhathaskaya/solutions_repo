@@ -101,7 +101,9 @@ $$
 
 ---
 
-##  3. Implementation 
+##  3. Implementation
+---
+
 <details>
 <summary>Click to expand full simulation code for velocity, altitude, and angle comparisons</summary>
 
