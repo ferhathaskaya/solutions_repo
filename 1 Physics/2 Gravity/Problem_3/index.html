@@ -88,6 +88,8 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#python-implementation-for-trajectory-simulation-and-visualization">Python Implementation for Trajectory Simulation and Visualization</a>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#velocity-comparisons">Velocity Comparisons</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -485,59 +487,7 @@ import numpy as np
 </details>
 <p><strong>Velocity Comparison</strong></p>
 <p><img alt="alt text" src="../Velocity-Based%20Trajectories%20%28300%20Km%20Altitude%2C%2090%C2%B0%20Angle%29%20%282%29.png"/></p>
-<p>Here, we fix the altitude to 300 km and launch angle to 90°, and vary the initial speed.
-| <strong>Speed (km/s)</strong> | <strong>Resulting Orbit Type</strong> <br/>
-  |
-| ---------------- | ------------------------------- |
-| 3.0              | Immediate reentry               |
-| 4.0              | Suborbital, falls back to Earth |
-| 6.0              | Partial orbit, returns          |
-| 7.7              | Circular or elliptical orbit    |
-| 9.0              | Elongated elliptical orbit      |
-| 11.2             | Parabolic escape                |
-| 13.0             | Hyperbolic escape               |</p>
-<p>This table illustrates how increasing speed increases orbital range and determines escape conditions.</p>
-<p>Showing how different initial speeds at 300 km altitude (launched vertically) affect the trajectory:</p>
-<ul>
-<li>Low speeds (3–4 km/s): reentry</li>
-<li>Medium speeds (6–9 km/s): elliptical orbits</li>
-<li>High speeds (11.2+ km/s): escape trajectories</li>
-</ul>
-<p><strong>Altitude Comparison</strong></p>
-<p><img alt="alt text" src="../Altitude-Based%20Trajectories%20%28Speed%20%3D%207.7%20KmS%2C%2090%C2%B0%20Angle%29.png"/></p>
-<p>Here, we fix the <strong>speed to 7.7 km/s</strong> (near orbital speed) and vary the <strong>altitude</strong>. Launch angle is kept at 90°.</p>
-<table>
-<thead>
-<tr>
-<th><strong>Altitude (km)</strong></th>
-<th><strong>Resulting Orbit</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>100</td>
-<td>Smaller elliptical orbit, lower stability</td>
-</tr>
-<tr>
-<td>300</td>
-<td>Stable low Earth orbit</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Broader elliptical orbit</td>
-</tr>
-<tr>
-<td>1000</td>
-<td>Long-period elliptical orbit</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>As altitude increases (100 km → 1000 km), the orbits become wider and more stable.</li>
-<li>All trajectories start at 90° angle with 7.7 km/s speed — showing how <strong>altitude alone</strong> influences the orbital shape and duration.</li>
-</ul>
-<p><strong>Angle Comparison</strong></p>
-<p><img alt="alt text" src="../Angle-Based%20Trajectories%20%28300%20Km%20Altitude%2C%20Speed%20%3D%207.7%20KmS%29.png"/></p>
+<h2 id="velocity-comparisons">Velocity Comparisons</h2>
 <p>Here, we fix the <strong>altitude to 300 km</strong> and <strong>launch angle to 90°</strong>, and vary the <strong>initial speed</strong>.</p>
 <table>
 <thead>
@@ -578,6 +528,87 @@ import numpy as np
 </tbody>
 </table>
 <p>This table illustrates how increasing speed increases orbital range and determines escape conditions.</p>
+<p>Showing how different initial speeds at 300 km altitude (launched vertically) affect the trajectory:</p>
+<ul>
+<li>Low speeds (3–4 km/s): reentry</li>
+<li>Medium speeds (6–9 km/s): elliptical orbits</li>
+<li>High speeds (11.2+ km/s): escape trajectories</li>
+</ul>
+<p><strong>Altitude Comparison</strong></p>
+<p><img alt="alt text" src="../Altitude-Based%20Trajectories%20%28Speed%20%3D%207.7%20KmS%2C%2090%C2%B0%20Angle%29.png"/></p>
+<p>Here, we fix the <strong>speed to 7.7 km/s</strong> (near orbital speed) and vary the <strong>altitude</strong>. Launch angle is kept at 90°.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Altitude (km)</strong></th>
+<th><strong>Resulting Orbit</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100</td>
+<td>Smaller elliptical orbit, lower stability</td>
+</tr>
+<tr>
+<td>300</td>
+<td>Stable low Earth orbit</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Broader elliptical orbit</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>Long-period elliptical orbit</td>
+</tr>
+<tr>
+<td>- As altitude increases (100 km → 1000 km), the orbits become wider and more stable.</td>
+<td></td>
+</tr>
+<tr>
+<td>- All trajectories start at 90° angle with 7.7 km/s speed — showing how <strong>altitude alone</strong> influences the orbital shape and duration.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Angle Comparison</strong></p>
+<p><img alt="alt text" src="../Angle-Based%20Trajectories%20%28300%20Km%20Altitude%2C%20Speed%20%3D%207.7%20KmS%29.png"/></p>
+<p>Here, we fix the <strong>altitude to 300 km</strong> and <strong>speed to 7.7 km/s</strong>, and vary the <strong>launch angle</strong> from horizontal (0°) to vertical (90°) and beyond.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Angle (°)</strong></th>
+<th><strong>Resulting Orbit Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Skimming trajectory, reentry likely</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Low arc, short elliptical path</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Optimal for range, stable ellipse</td>
+</tr>
+<tr>
+<td>60</td>
+<td>Higher arc, longer orbit</td>
+</tr>
+<tr>
+<td>90</td>
+<td>High-altitude ellipse or circular</td>
+</tr>
+<tr>
+<td>120</td>
+<td>Retrograde-like arc, steep reentry</td>
+</tr>
+</tbody>
+</table>
+<p>This comparison shows how the launch direction affects orbital characteristics and stability even at the same speed and altitude.</p>
 <p>This comparison shows how the launch direction affects orbital characteristics and stability even at the same speed and altitude</p>
 <ul>
 <li>All payloads are released from 300 km altitude at <strong>7.7 km/s</strong>, but with varying angles.</li>
