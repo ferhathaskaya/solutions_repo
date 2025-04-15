@@ -278,8 +278,10 @@ This implementation is used for all comparisons shown in the plots. The velocity
     plt.grid(True)
     plt.legend()
     plt.tight_layout()
-    plt.show().
+    plt.show()
+
 </details>
+
 
 
 
@@ -346,5 +348,4 @@ This comparison shows how the launch direction affects orbital characteristics a
   - **45°–90°** create stable orbits.
   - **120°** launches the payload backward into a steep downward arc.
 
-22
-2
+3
