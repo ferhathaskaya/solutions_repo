@@ -167,9 +167,8 @@ This implementation is used for all comparisons shown in the plots. The velocity
 
 
 <details>
-    <summary>Click to expand full simulation code for velocity, altitude, and angle comparisons</summary>
+<summary>Click to expand full simulation code for velocity, altitude, and angle comparisons</summary>
 
-    ```python
     import numpy as np
     import matplotlib.pyplot as plt
 
@@ -282,7 +281,6 @@ This implementation is used for all comparisons shown in the plots. The velocity
     plt.legend()
     plt.tight_layout()
     plt.show()
-    ```
 
 </details>
 
