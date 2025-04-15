@@ -231,7 +231,7 @@ $$</p>
 <hr/>
 <h2 id="2-numerical-simulation-of-trajectories"><strong>2. Numerical Simulation of Trajectories</strong></h2>
 <p>We'll simulate several types of trajectories based on initial conditions:
-- <strong>Elliptical Orbit</strong>: <span class="arithmatex">\( v &lt; v_{\text{esc}} \)</span> but tangential
+-<strong>Elliptical Orbit</strong>: <span class="arithmatex">\( v &lt; v_{\text{esc}} \)</span> but tangential
 - <strong>Parabolic Escape</strong>: <span class="arithmatex">\( v = v_{\text{esc}} \)</span>
 - <strong>Hyperbolic Trajectory</strong>: <span class="arithmatex">\( v &gt; v_{\text{esc}} \)</span>
 - <strong>Ballistic Reentry</strong>: <span class="arithmatex">\( v &lt; v_{\text{orb}} \)</span></p>
@@ -248,78 +248,79 @@ $$</li>
 </ul>
 <hr/>
 <h2 id="3-implementation">3. Implementation</h2>
-<p>&lt;<details></details></p>
+<details>
 <summary>Click to expand Python code for trajectory simulation and plotting</summary>
-<pre><code>import numpy as np
-import matplotlib.pyplot as plt
 
-# Constants
-G = 6.67430e-11       # gravitational constant (m^3/kg/s^2)
-M = 5.972e24          # mass of Earth (kg)
-R_earth = 6.371e6     # radius of Earth (m)
+    import numpy as np
+    import matplotlib.pyplot as plt
 
-# Time parameters
-dt = 1                # time step in seconds
-steps = 30000         # total number of steps (~8 hours)
+    # Constants
+    G = 6.67430e-11       # gravitational constant (m^3/kg/s^2)
+    M = 5.972e24          # mass of Earth (kg)
+    R_earth = 6.371e6     # radius of Earth (m)
 
-def simulate_trajectory(r0, v0):
-    r = np.array(r0, dtype=float)
-    v = np.array(v0, dtype=float)
+    # Time parameters
+    dt = 1                # time step in seconds
+    steps = 30000         # total number of steps (~8 hours)
 
-    positions = [r.copy()]
+    def simulate_trajectory(r0, v0):
+        r = np.array(r0, dtype=float)
+        v = np.array(v0, dtype=float)
 
-    for _ in range(steps):
-        r_norm = np.linalg.norm(r)
-        a = -G * M * r / r_norm**3
-        r += v * dt + 0.5 * a * dt**2
-        a_new = -G * M * r / np.linalg.norm(r)**3
-        v += 0.5 * (a + a_new) * dt
-        positions.append(r.copy())
+        positions = [r.copy()]
 
-        if np.linalg.norm(r) &lt; R_earth:
-            break  # hit the Earth
+        for _ in range(steps):
+            r_norm = np.linalg.norm(r)
+            a = -G * M * r / r_norm**3
+            r += v * dt + 0.5 * a * dt**2
+            a_new = -G * M * r / np.linalg.norm(r)**3
+            v += 0.5 * (a + a_new) * dt
+            positions.append(r.copy())
 
-    return np.array(positions)
+            if np.linalg.norm(r) &lt; R_earth:
+                break  # hit the Earth
 
-# Initial position: 300 km above Earth
-altitude = 300e3
-r0 = np.array([R_earth + altitude, 0.0])
+        return np.array(positions)
 
-# Case 1: Low velocity (reentry)
-v_reentry = np.array([0.0, 3000.0])
+    # Initial position: 300 km above Earth
+    altitude = 300e3
+    r0 = np.array([R_earth + altitude, 0.0])
 
-# Case 2: Circular orbital velocity
-v_orbit = np.array([0.0, np.sqrt(G * M / (R_earth + altitude))])
+    # Case 1: Low velocity (reentry)
+    v_reentry = np.array([0.0, 3000.0])
 
-# Case 3: Escape velocity
-v_escape = np.array([0.0, np.sqrt(2 * G * M / (R_earth + altitude))])
+    # Case 2: Circular orbital velocity
+    v_orbit = np.array([0.0, np.sqrt(G * M / (R_earth + altitude))])
 
-# Run simulations
-traj_reentry = simulate_trajectory(r0, v_reentry)
-traj_orbit = simulate_trajectory(r0, v_orbit)
-traj_escape = simulate_trajectory(r0, v_escape)
+    # Case 3: Escape velocity
+    v_escape = np.array([0.0, np.sqrt(2 * G * M / (R_earth + altitude))])
 
-# Plotting
-plt.figure(figsize=(7, 7))
-theta = np.linspace(0, 2*np.pi, 500)
-earth_x = R_earth * np.cos(theta)
-earth_y = R_earth * np.sin(theta)
-plt.plot(earth_x, earth_y, color='black', label='Earth')
+    # Run simulations
+    traj_reentry = simulate_trajectory(r0, v_reentry)
+    traj_orbit = simulate_trajectory(r0, v_orbit)
+    traj_escape = simulate_trajectory(r0, v_escape)
 
-plt.plot(traj_reentry[:,0], traj_reentry[:,1], label='Reentry', linestyle='--')
-plt.plot(traj_orbit[:,0], traj_orbit[:,1], label='Orbital', linestyle='-')
-plt.plot(traj_escape[:,0], traj_escape[:,1], label='Escape', linestyle=':')
+    # Plotting
+    plt.figure(figsize=(7, 7))
+    theta = np.linspace(0, 2*np.pi, 500)
+    earth_x = R_earth * np.cos(theta)
+    earth_y = R_earth * np.sin(theta)
+    plt.plot(earth_x, earth_y, color='black', label='Earth')
 
-plt.axis('equal')
-plt.xlabel('x (m)')
-plt.ylabel('y (m)')
-plt.title('Comparison of Payload Trajectories at Different Velocities')
-plt.legend()
-plt.grid(True)
-plt.tight_layout()
-plt.show()
-</code></pre>
+    plt.plot(traj_reentry[:,0], traj_reentry[:,1], label='Reentry', linestyle='--')
+    plt.plot(traj_orbit[:,0], traj_orbit[:,1], label='Orbital', linestyle='-')
+    plt.plot(traj_escape[:,0], traj_escape[:,1], label='Escape', linestyle=':')
 
+    plt.axis('equal')
+    plt.xlabel('x (m)')
+    plt.ylabel('y (m)')
+    plt.title('Comparison of Payload Trajectories at Different Velocities')
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
+
+</details>
 <h3 id="simulation-result-payload-trajectories-near-earth"><strong>Simulation Result: Payload Trajectories Near Earth</strong></h3>
 <p><img alt="alt text" src="../Comparison%20Of%20Payload%20Trajectories%20At%20Different%20Velocities.png"/></p>
 <p>Here's what you're seeing in the plot:</p>
@@ -578,7 +579,8 @@ Here, we fix the altitude to 300 km and launch angle to 90°, and vary the initi
 <li><strong>45°–90°</strong> create stable orbits.</li>
 <li><strong>120°</strong> launches the payload backward into a steep downward arc.</li>
 </ul>
-<p>11</p>
+<p>11
+2</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
