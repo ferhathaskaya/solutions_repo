@@ -44,7 +44,7 @@ Kepler's Laws describe the motion of planets around the Sun but can be applied t
 ##  **2. Numerical Simulation of Trajectories**
 
 We'll simulate several types of trajectories based on initial conditions:
-- **Elliptical Orbit**: \( v < v_{\text{esc}} \) but tangential
+-**Elliptical Orbit**: \( v < v_{\text{esc}} \) but tangential
 - **Parabolic Escape**: \( v = v_{\text{esc}} \)
 - **Hyperbolic Trajectory**: \( v > v_{\text{esc}} \)
 - **Ballistic Reentry**: \( v < v_{\text{orb}} \)
@@ -63,7 +63,7 @@ $$
 
 ##  3. Implementation 
 
-<<details>
+<details>
 <summary>Click to expand Python code for trajectory simulation and plotting</summary>
 
     import numpy as np
@@ -348,4 +348,4 @@ This comparison shows how the launch direction affects orbital characteristics a
   - **120°** launches the payload backward into a steep downward arc.
 
 11
-
+2
