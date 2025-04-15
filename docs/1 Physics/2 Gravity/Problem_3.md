@@ -164,7 +164,6 @@ Here's what you're seeing in the plot:
 ## Python Implementation for Trajectory Simulation and Visualization
 This implementation is used for all comparisons shown in the plots. The velocity, altitude, and angle parameters are varied to illustrate their effects on orbital behavior.
 
-
 <details>
 <summary>Click to expand full simulation code for velocity, altitude, and angle comparisons</summary>
 
@@ -279,9 +278,9 @@ This implementation is used for all comparisons shown in the plots. The velocity
     plt.grid(True)
     plt.legend()
     plt.tight_layout()
-    plt.show()
-
+    plt.show().
 </details>
+
 
 
 **Velocity Comparison**
@@ -347,5 +346,5 @@ This comparison shows how the launch direction affects orbital characteristics a
   - **45°–90°** create stable orbits.
   - **120°** launches the payload backward into a steep downward arc.
 
-11
+22
 2
