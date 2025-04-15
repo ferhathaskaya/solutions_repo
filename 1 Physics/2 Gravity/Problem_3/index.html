@@ -207,16 +207,31 @@
 <p>The resulting path may be <strong>orbital (elliptical), parabolic, hyperbolic, or reentry</strong> depending on the initial conditions. </p>
 <h2 id="1-theoretical-principles"><strong>1. Theoretical Principles</strong></h2>
 <p>When a payload is released from a moving rocket near Earth, its path is determined by <strong>Newton’s Law of Universal Gravitation</strong> and its <strong>initial velocity vector</strong>.</p>
-<h3 id="newtons-law-of-gravitation"><strong>Newton’s Law of Gravitation</strong></h3>
-<p>$$
-\vec{F} = - \frac{GMm}{r^2} \hat{r}
-$$
-Where:
-- <span class="arithmatex">\( G \)</span> = gravitational constant <span class="arithmatex">\( (6.674 \times 10^{-11} \, \text{Nm}^2/\text{kg}^2) \)</span>
-- <span class="arithmatex">\( M \)</span> = mass of Earth <span class="arithmatex">\( (5.972 \times 10^{24} \, \text{kg}) \)</span>
-- <span class="arithmatex">\( m \)</span> = mass of the payload
-- <span class="arithmatex">\( r \)</span> = distance from Earth’s center to the payload
-- <span class="arithmatex">\( \hat{r} \)</span> = unit vector in the radial direction</p>
+<h3 id="newtons-law-of-gravitation">Newton’s Law of Gravitation</h3>
+<p>The gravitational force between two masses is given by:</p>
+<div class="arithmatex">\[
+\vec{F} = - \frac{GMm}{r^2} \, \hat{r}
+\]</div>
+<p><strong>Where:</strong></p>
+<ul>
+<li>
+<p><span class="arithmatex">\( G \)</span>: Gravitational constant<br/>
+<span class="arithmatex">\( = 6.674 \times 10^{-11} \, \text{N·m}^2/\text{kg}^2 \)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\( M \)</span>: Mass of the Earth<br/>
+<span class="arithmatex">\( = 5.972 \times 10^{24} \, \text{kg} \)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\( m \)</span>: Mass of the payload</p>
+</li>
+<li>
+<p><span class="arithmatex">\( r \)</span>: Distance from Earth's center to the payload</p>
+</li>
+<li>
+<p><span class="arithmatex">\( \hat{r} \)</span>: Unit vector pointing radially outward from Earth to the payload</p>
+</li>
+</ul>
 <p>We use <strong>Newton's Second Law</strong> to derive the equation of motion:</p>
 <div class="arithmatex">\[
 \vec{a} = \frac{\vec{F}}{m} = - \frac{GM}{r^2} \hat{r}
@@ -248,12 +263,26 @@ $$</p>
 </li>
 </ol>
 <hr/>
-<h2 id="2-numerical-simulation-of-trajectories"><strong>2. Numerical Simulation of Trajectories</strong></h2>
-<p>We'll simulate several types of trajectories based on initial conditions:
--<strong>Elliptical Orbit</strong>: <span class="arithmatex">\( v &lt; v_{\text{esc}} \)</span> but tangential
-- <strong>Parabolic Escape</strong>: <span class="arithmatex">\( v = v_{\text{esc}} \)</span>
-- <strong>Hyperbolic Trajectory</strong>: <span class="arithmatex">\( v &gt; v_{\text{esc}} \)</span>
-- <strong>Ballistic Reentry</strong>: <span class="arithmatex">\( v &lt; v_{\text{orb}} \)</span></p>
+<h2 id="2-numerical-simulation-of-trajectories">2. Numerical Simulation of Trajectories</h2>
+<p>We simulate several types of trajectories based on the <strong>initial speed and direction</strong> of the payload:</p>
+<ul>
+<li>
+<p><strong>Elliptical Orbit</strong><br/>
+<span class="arithmatex">\( v &lt; v_{\text{esc}} \)</span> (sub-escape speed, tangential to surface)</p>
+</li>
+<li>
+<p><strong>Parabolic Escape</strong><br/>
+<span class="arithmatex">\( v = v_{\text{esc}} \)</span> (just enough speed to escape Earth’s gravity)</p>
+</li>
+<li>
+<p><strong>Hyperbolic Trajectory</strong><br/>
+<span class="arithmatex">\( v &gt; v_{\text{esc}} \)</span> (excess speed; the object escapes on an open path)</p>
+</li>
+<li>
+<p><strong>Ballistic Reentry</strong><br/>
+<span class="arithmatex">\( v &lt; v_{\text{orb}} \)</span> (too slow to maintain orbit, falls back to Earth)</p>
+</li>
+</ul>
 <h3 id="definitions">Definitions</h3>
 <ul>
 <li>Escape Velocity:<br/>
