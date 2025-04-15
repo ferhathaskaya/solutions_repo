@@ -205,7 +205,7 @@ Here's what you're seeing in the plot:
 - **Energy > 0** ⇒ hyperbolic trajectory
 
 ##  4. Payload Trajectory Comparisons
-
+---
 ## Python Implementation for Trajectory Simulation and Visualization
 This implementation is used for all comparisons shown in the plots. The velocity, altitude, and angle parameters are varied to illustrate their effects on orbital behavior.
 
@@ -329,7 +329,7 @@ This implementation is used for all comparisons shown in the plots. The velocity
 
 </details>
 
-
+---
 
 **Velocity Comparison**
 
