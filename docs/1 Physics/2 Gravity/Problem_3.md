@@ -2,6 +2,7 @@
 # Trajectories of a Freely Released Payload Near Earth
 
 When a payload is released from a rocket near Earth, its motion is influenced by two key factors:
+
 - **Gravitational attraction** from Earth
 - Its **initial velocity** and direction at the moment of release
 
@@ -14,7 +15,7 @@ Depending on these conditions, the payload can follow different paths:
 
 ---
 
-## 📚 1. Theoretical Principles
+## 1. Theoretical Principles
 
 The motion of the payload is governed by:
 
