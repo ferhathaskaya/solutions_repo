@@ -62,11 +62,11 @@ $$
 ---
 
 ##  3. Implementation 
-
 <details>
-<summary>Click to expand Python code for trajectory simulation and plotting</summary>
+<summary>Click to expand full simulation code for velocity, altitude, and angle comparisons</summary>
 
-    import numpy as np
+<pre><code>
+import numpy as np
     import matplotlib.pyplot as plt
 
     # Constants
@@ -135,7 +135,12 @@ $$
     plt.tight_layout()
     plt.show()
 
+</code></pre>
+
 </details>
+
+
+
 
 
 ###  **Simulation Result: Payload Trajectories Near Earth**
@@ -290,7 +295,8 @@ This implementation is used for all comparisons shown in the plots. The velocity
 
 ![alt text](<Velocity-Based Trajectories (300 Km Altitude, 90° Angle) (2).png>)
 Here, we fix the altitude to 300 km and launch angle to 90°, and vary the initial speed.
-| **Speed (km/s)** | **Resulting Orbit Type**        |
+| **Speed (km/s)** | **Resulting Orbit Type**      
+  |
 | ---------------- | ------------------------------- |
 | 3.0              | Immediate reentry               |
 | 4.0              | Suborbital, falls back to Earth |
@@ -349,4 +355,4 @@ This comparison shows how the launch direction affects orbital characteristics a
   - **45°–90°** create stable orbits.
   - **120°** launches the payload backward into a steep downward arc.
 
-4
+
