@@ -60,36 +60,6 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 3</a>
 <ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="#trajectories-of-a-freely-released-payload-near-earth">Trajectories of a Freely Released Payload Near Earth</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#1-theoretical-principles">1. Theoretical Principles</a>
-<ul>
-<li class="toctree-l4"><a class="reference internal" href="#newtons-law-of-gravitation">Newton’s Law of Gravitation</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#keplers-laws">Kepler’s Laws</a>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#2-numerical-simulation-of-trajectories">2. Numerical Simulation of Trajectories</a>
-<ul>
-<li class="toctree-l4"><a class="reference internal" href="#definitions">Definitions</a>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#3-implementation">3. Implementation</a>
-<ul>
-<li class="toctree-l4"><a class="reference internal" href="#simulation-result-payload-trajectories-near-earth">Simulation Result: Payload Trajectories Near Earth</a>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#key-physics-insights">Key Physics Insights:</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#4-payload-trajectory-comparisons">4. Payload Trajectory Comparisons</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#python-implementation-for-trajectory-simulation-and-visualization">Python Implementation for Trajectory Simulation and Visualization</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#velocity-comparisons">Velocity Comparisons</a>
-</li>
 </ul>
 </li>
 </ul>
@@ -202,11 +172,25 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-3">Problem 3</h1>
-<h2 id="trajectories-of-a-freely-released-payload-near-earth"><strong>Trajectories of a Freely Released Payload Near Earth</strong></h2>
-<p>When a payload is released from a rocket near Earth, its motion is governed by gravitational attraction and its initial velocity. </p>
-<p>The resulting path may be <strong>orbital (elliptical), parabolic, hyperbolic, or reentry</strong> depending on the initial conditions. </p>
-<h2 id="1-theoretical-principles"><strong>1. Theoretical Principles</strong></h2>
-<p>When a payload is released from a moving rocket near Earth, its path is determined by <strong>Newton’s Law of Universal Gravitation</strong> and its <strong>initial velocity vector</strong>.</p>
+<h1 id="trajectories-of-a-freely-released-payload-near-earth">Trajectories of a Freely Released Payload Near Earth</h1>
+<p>When a payload is released from a rocket near Earth, its motion is influenced by two key factors:
+- <strong>Gravitational attraction</strong> from Earth
+- Its <strong>initial velocity</strong> and direction at the moment of release</p>
+<p>Depending on these conditions, the payload can follow different paths:</p>
+<ul>
+<li><strong>Orbital (Elliptical)</strong>: bound motion around Earth  </li>
+<li><strong>Parabolic</strong>: just enough speed to escape Earth’s gravity  </li>
+<li><strong>Hyperbolic</strong>: exceeds escape speed, escaping rapidly  </li>
+<li><strong>Reentry</strong>: insufficient speed, falls back to Earth</li>
+</ul>
+<hr/>
+<h2 id="1-theoretical-principles">📚 1. Theoretical Principles</h2>
+<p>The motion of the payload is governed by:</p>
+<ul>
+<li><strong>Newton’s Law of Universal Gravitation</strong></li>
+<li>The <strong>initial velocity vector</strong> of the payload at release</li>
+</ul>
+<p>These determine whether the object enters orbit, escapes, or returns to Earth.</p>
 <h3 id="newtons-law-of-gravitation">Newton’s Law of Gravitation</h3>
 <p>The gravitational force between two masses is given by:</p>
 <div class="arithmatex">\[
