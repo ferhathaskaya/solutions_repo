@@ -294,6 +294,7 @@ This implementation is used for all comparisons shown in the plots. The velocity
 **Velocity Comparison**
 
 ![alt text](<Velocity-Based Trajectories (300 Km Altitude, 90° Angle) (2).png>)
+
 Here, we fix the altitude to 300 km and launch angle to 90°, and vary the initial speed.
 | **Speed (km/s)** | **Resulting Orbit Type**      
   |
@@ -336,16 +337,20 @@ Here, we fix the **speed to 7.7 km/s** (near orbital speed) and vary the **altit
 
 ![alt text](<Angle-Based Trajectories (300 Km Altitude, Speed = 7.7 KmS).png>)
 
-Here, we fix the **altitude to 300 km** and **speed to 7.7 km/s**, and vary the **launch angle** from horizontal (0°) to vertical (90°) and beyond.
+Here, we fix the **altitude to 300 km** and **launch angle to 90°**, and vary the **initial speed**.
 
-| **Angle (°)** | **Resulting Orbit Type**            |
-| ------------- | ----------------------------------- |
-| 0             | Skimming trajectory, reentry likely |
-| 30            | Low arc, short elliptical path      |
-| 45            | Optimal for range, stable ellipse   |
-| 60            | Higher arc, longer orbit            |
-| 90            | High-altitude ellipse or circular   |
-| 120           | Retrograde-like arc, steep reentry  |
+| **Speed (km/s)** | **Resulting Orbit Type**        |
+| ---------------- | ------------------------------- |
+| 3.0              | Immediate reentry               |
+| 4.0              | Suborbital, falls back to Earth |
+| 6.0              | Partial orbit, returns          |
+| 7.7              | Circular or elliptical orbit    |
+| 9.0              | Elongated elliptical orbit      |
+| 11.2             | Parabolic escape                |
+| 13.0             | Hyperbolic escape               |
+
+This table illustrates how increasing speed increases orbital range and determines escape conditions.
+
 
 This comparison shows how the launch direction affects orbital characteristics and stability even at the same speed and altitude
 
