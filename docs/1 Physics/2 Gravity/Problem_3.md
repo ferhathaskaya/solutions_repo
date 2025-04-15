@@ -62,7 +62,6 @@ $$
 ---
 
 ##  3. Implementation 
-PGreat! Here's your updated and corrected collapsible code block, ready to paste into your mkDocs `.md` file — now with a properly formatted `<summary>` line and no typos:
 
 ```markdown
 <details>
@@ -140,7 +139,7 @@ plt.show()
 ```
 
 </details>
-```
+
 
 
 
@@ -160,20 +159,8 @@ Here's what you're seeing in the plot:
 
 ---
 
-## 🛰 What You Can Learn:
+## Key Physics Insights:
 - **Energy = 0** at escape velocity ⇒ parabolic path  
 - **Energy < 0** ⇒ elliptical or suborbital trajectory  
-- **Energy > 0** ⇒ hyperbolic trajectory (leaves forever!)
-
-This is the foundation for **orbital insertion**, **interplanetary transfers**, and **return trajectories**.
-
-
-## 📌 Key Physics Insights
-
-| Trajectory Type      | Condition                        | Application                           |
-|----------------------|----------------------------------|----------------------------------------|
-| Suborbital           | \( v < v_{\text{orb}} \)         | Missile arcs, space tourism            |
-| Orbital              | \( v = v_{\text{orb}} \)         | Satellites, space stations             |
-| Parabolic Escape     | \( v = v_{\text{esc}} \)         | Theoretical edge of gravity            |
-| Hyperbolic Escape    | \( v > v_{\text{esc}} \)         | Interplanetary missions, Voyager       |
+- **Energy > 0** ⇒ hyperbolic trajectory
 
