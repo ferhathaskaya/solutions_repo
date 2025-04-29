@@ -1,9 +1,11 @@
 # Problem 1
 # Interference Patterns on a Water Surface from Multiple Point Sources
 
-## Motivation
+---
 
-Wave interference is a foundational concept in physics, describing how waves from different sources interact. On a water surface, such interactions can be vividly visualized when ripples from separate points meet, creating striking interference patterns. These patterns can represent constructive interference (waves amplify) or destructive interference (waves cancel). This project simulates and analyzes these patterns for a symmetric arrangement of point sources, offering insight into the principles of wave superposition.
+Wave interference occurs when waves from different sources overlap, creating new patterns. On a water surface, this is easy to observe: ripples from different points meet, producing regions where the waves either reinforce (constructive interference) or cancel each other out (destructive interference).
+
+This project models and analyzes interference patterns created by a symmetric arrangement of point sources. Through this simulation, we explore the principles of wave superposition and gain a clearer understanding of how coherent waves interact.
 
 ---
 
