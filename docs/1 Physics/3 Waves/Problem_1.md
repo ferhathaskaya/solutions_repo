@@ -248,12 +248,16 @@ Waves arrive out-of-phase and cancel out.
 
 ---
 
-##  Conclusion
+Here’s a much cleaner and more readable version of your **Conclusion** section:
 
-This simulation provides a hands-on visual of wave interference principles:
-- **Constructive and destructive interference** emerge naturally from wave superposition
-- The **geometry of the source layout** determines the spatial structure of the pattern
-- These ideas extend to light, sound, and quantum waves — making this a fundamental study in all wave physics
+---
+
+## Conclusion
+
+This simulation offers a clear visual demonstration of wave interference principles:
+- **Constructive and destructive interference** arise naturally from the superposition of waves.
+- The **geometry of the source arrangement** shapes the spatial structure of the resulting pattern.
+- These concepts apply broadly to light, sound, and quantum waves, highlighting the fundamental role of interference across all areas of wave physics.
 
 ---
 
