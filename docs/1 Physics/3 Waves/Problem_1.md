@@ -258,5 +258,6 @@ This simulation offers a clear visual demonstration of wave interference princip
 - The **geometry of the source arrangement** shapes the spatial structure of the resulting pattern.
 
 - These concepts apply broadly to light, sound, and quantum waves, highlighting the fundamental role of interference across all areas of wave physics.
----
 
+---
+1
