@@ -120,13 +120,13 @@ plt.show()
 ![alt text](<Interference Pattern From 4 Point Sources (Square).png>)
 
 
-> **Fig. 1:** The water surface displacement due to four coherent wave sources arranged in a square. Bright areas show constructive interference; dark regions show destructive interference.
+> **Fig. :** The water surface displacement due to four coherent wave sources arranged in a square. Bright areas show constructive interference; dark regions show destructive interference.
 
 ---
 
 ##  Animated Visualization
 
-Wave animation
+Wave animation (varying t only)
 
 <details>
 <summary>Click to expand full simulation code for animated GIF showing the interference pattern of four wave</summary>
@@ -204,12 +204,17 @@ plt.close(fig)
 </details>
 
 ---
+Wave animation (varying t only)
 
 ![alt text](square_wave_interference.gif)
 
-> **Fig. 2:** Animated view of wave interference over time. Standing wave-like zones emerge where waves reinforce or cancel consistently.
+> **Fig. :** Animated view of wave interference over time. Standing wave-like zones emerge where waves reinforce or cancel consistently.
 
 ---
+Wave animation (varying wavelength)
+![alt text](wavelength_variation.gif)
+
+> **Fig. :** Animated view of wave interference with a slowly increasing wavelength. As the wavelength grows, the interference fringes spread apart, resulting in broader zones of constructive and destructive interference.
 
 ##  Interference Pattern Analysis
 
