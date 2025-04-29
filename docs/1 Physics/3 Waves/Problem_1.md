@@ -211,10 +211,7 @@ Wave animation (varying t only)
 > **Fig. :** Animated view of wave interference over time. Standing wave-like zones emerge where waves reinforce or cancel consistently.
 
 ---
-Wave animation (varying wavelength)
-![alt text](wavelength_variation.gif)
 
-> **Fig. :** Animated view of wave interference with a slowly increasing wavelength. As the wavelength grows, the interference fringes spread apart, resulting in broader zones of constructive and destructive interference.
 
 ##  Interference Pattern Analysis
 
