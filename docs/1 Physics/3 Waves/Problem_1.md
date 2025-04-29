@@ -260,4 +260,4 @@ This simulation offers a clear visual demonstration of wave interference princip
 - These concepts apply broadly to light, sound, and quantum waves, highlighting the fundamental role of interference across all areas of wave physics.
 
 ---
-1
+
