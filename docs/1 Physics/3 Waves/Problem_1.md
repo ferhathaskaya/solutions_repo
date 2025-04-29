@@ -44,8 +44,11 @@ Where \( r_i \) is the distance from the \(i^{\text{th}}\) source to the point \
 ##  Simulation Setup (Square Configuration)
 
 For this simulation:
+
 - We place 4 point sources at the **corners of a square** centered at the origin
+
 - All emit waves with the same amplitude, wavelength, and frequency
+
 - We compute the net surface displacement at every point on a grid
 
 ###  Parameters Used:
