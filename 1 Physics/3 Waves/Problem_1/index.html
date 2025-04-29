@@ -172,6 +172,238 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="interference-patterns-on-a-water-surface-from-multiple-point-sources">Interference Patterns on a Water Surface from Multiple Point Sources</h1>
+<h2 id="motivation">Motivation</h2>
+<p>Wave interference is a foundational concept in physics, describing how waves from different sources interact. On a water surface, such interactions can be vividly visualized when ripples from separate points meet, creating striking interference patterns. These patterns can represent constructive interference (waves amplify) or destructive interference (waves cancel). This project simulates and analyzes these patterns for a symmetric arrangement of point sources, offering insight into the principles of wave superposition.</p>
+<hr/>
+<h2 id="theoretical-model">Theoretical Model</h2>
+<h3 id="single-source-circular-wave">Single-Source Circular Wave</h3>
+<p>A circular wave from a point source located at <span class="arithmatex">\((x_0, y_0)\)</span> on the water surface is described by:</p>
+<div class="arithmatex">\[
+\eta(x, y, t) = \frac{A}{\sqrt{r}} \cos(kr - \omega t + \phi)
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\( \eta(x, y, t) \)</span> = displacement of the water surface at point <span class="arithmatex">\((x, y)\)</span> and time <span class="arithmatex">\(t\)</span> </li>
+<li><span class="arithmatex">\( A \)</span> = wave amplitude  </li>
+<li><span class="arithmatex">\( r = \sqrt{(x - x_0)^2 + (y - y_0)^2} \)</span> = distance from source to the point  </li>
+<li><span class="arithmatex">\( k = \frac{2\pi}{\lambda} \)</span> = wave number  </li>
+<li><span class="arithmatex">\( \omega = 2\pi f \)</span> = angular frequency  </li>
+<li><span class="arithmatex">\( \phi \)</span> = initial phase  </li>
+<li>The <span class="arithmatex">\( \frac{1}{\sqrt{r}} \)</span> term models radial amplitude decay (spherical spreading in 2D)</li>
+</ul>
+<h3 id="superposition-of-multiple-waves">Superposition of Multiple Waves</h3>
+<p>For <span class="arithmatex">\(N\)</span> sources located at the vertices of a regular polygon, the total displacement at a point <span class="arithmatex">\((x, y)\)</span> is the <strong>sum</strong> of the individual wave contributions:</p>
+<div class="arithmatex">\[
+\eta_{\text{total}}(x, y, t) = \sum_{i=1}^{N} \frac{A}{\sqrt{r_i}} \cos(kr_i - \omega t + \phi)
+\]</div>
+<p>Where <span class="arithmatex">\( r_i \)</span> is the distance from the <span class="arithmatex">\(i^{\text{th}}\)</span> source to the point <span class="arithmatex">\((x, y)\)</span>. All sources are assumed to emit <strong>coherent</strong> waves (same frequency and constant phase relationship).</p>
+<hr/>
+<h2 id="simulation-setup-square-configuration">Simulation Setup (Square Configuration)</h2>
+<p>For this simulation:
+- We place 4 point sources at the <strong>corners of a square</strong> centered at the origin
+- All emit waves with the same amplitude, wavelength, and frequency
+- We compute the net surface displacement at every point on a grid</p>
+<h3 id="parameters-used">Parameters Used:</h3>
+<ul>
+<li>Amplitude <span class="arithmatex">\( A = 1 \)</span></li>
+<li>Wavelength <span class="arithmatex">\( \lambda = 2 \)</span></li>
+<li>Frequency <span class="arithmatex">\( f = 1 \)</span></li>
+<li>Polygon: square (4 sources)</li>
+</ul>
+<hr/>
+<h2 id="static-visualization-at-t-0">Static Visualization at <span class="arithmatex">\( t = 0 \)</span></h2>
+<p>Interference pattern from square sources</p>
+<details>
+<summary>Click to expand full simulation code for  interference pattern</summary>
+<pre><code>
+    # Re-run after kernel reset
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Wave parameters
+A = 1            # Amplitude
+wavelength = 2   # Wavelength (lambda)
+frequency = 1    # Frequency (f)
+phi = 0          # Initial phase
+k = 2 * np.pi / wavelength
+omega = 2 * np.pi * frequency
+
+# Grid setup
+grid_size = 300
+x = np.linspace(-5, 5, grid_size)
+y = np.linspace(-5, 5, grid_size)
+X, Y = np.meshgrid(x, y)
+
+# Square vertex positions (centered)
+L = 4  # side length
+vertices = [
+    (-L/2, -L/2),
+    (-L/2,  L/2),
+    ( L/2,  L/2),
+    ( L/2, -L/2)
+]
+
+# Superposition at a fixed time t = 0
+t = 0
+eta_total = np.zeros_like(X)
+for (x0, y0) in vertices:
+    R = np.sqrt((X - x0)**2 + (Y - y0)**2) + 1e-6  # Avoid division by zero
+    eta = (A / np.sqrt(R)) * np.cos(k * R - omega * t + phi)
+    eta_total += eta
+
+# Plotting
+plt.figure(figsize=(8, 6))
+plt.contourf(X, Y, eta_total, levels=100, cmap='RdBu')
+plt.colorbar(label='Displacement η(x, y, t=0)')
+plt.title('Interference Pattern from 4 Point Sources (Square)')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.axis('equal')
+plt.tight_layout()
+plt.show()
+
+</code></pre>
+</details>
+<hr/>
+<p><img alt="alt text" src="../Interference%20Pattern%20From%204%20Point%20Sources%20%28Square%29.png"/></p>
+<blockquote>
+<p><strong>Fig. 1:</strong> The water surface displacement due to four coherent wave sources arranged in a square. Bright areas show constructive interference; dark regions show destructive interference.</p>
+</blockquote>
+<hr/>
+<h2 id="animated-visualization">Animated Visualization</h2>
+<p>Wave animation</p>
+<details>
+<summary>Click to expand full simulation code for animated GIF showing the interference pattern of four wave</summary>
+<pre><code>
+    import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+
+# --- Parameters ---
+A = 1            # Amplitude
+wavelength = 2   # Wavelength
+frequency = 1    # Frequency
+phi = 0          # Initial phase
+k = 2 * np.pi / wavelength
+omega = 2 * np.pi * frequency
+
+# --- Grid setup ---
+grid_size = 300
+x = np.linspace(-5, 5, grid_size)
+y = np.linspace(-5, 5, grid_size)
+X, Y = np.meshgrid(x, y)
+
+# --- Square vertices (sources) ---
+L = 4  # Side length of square
+vertices = [
+    (-L/2, -L/2),
+    (-L/2,  L/2),
+    ( L/2,  L/2),
+    ( L/2, -L/2)
+]
+
+# --- Set up the figure ---
+fig, ax = plt.subplots(figsize=(8, 6))
+cmap = plt.get_cmap('RdBu')
+
+# Initial contour (dummy)
+contour = ax.contourf(X, Y, np.zeros_like(X), levels=100, cmap=cmap)
+cbar = plt.colorbar(contour, ax=ax)
+cbar.set_label('Displacement η(x, y, t)')
+ax.set_title('Wave Interference Pattern')
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_aspect('equal')
+
+# --- Update function for animation ---
+def update(frame):
+    t = frame * 0.1  # Time increment
+    eta_total = np.zeros_like(X)
+
+    for (x0, y0) in vertices:
+        R = np.sqrt((X - x0)**2 + (Y - y0)**2) + 1e-6  # Small term to avoid divide-by-zero
+        eta = (A / np.sqrt(R)) * np.cos(k * R - omega * t + phi)
+        eta_total += eta
+
+    ax.clear()
+    contour = ax.contourf(X, Y, eta_total, levels=100, cmap=cmap)
+    ax.set_title(f'Wave Interference at t = {t:.1f} s')
+    ax.set_xlabel('x')
+    ax.set_ylabel('y')
+    ax.set_aspect('equal')
+    return contour.collections
+
+# --- Create animation ---
+ani = animation.FuncAnimation(fig, update, frames=60, blit=False)
+
+# --- Save as GIF ---
+ani.save('square_wave_interference.gif', writer='pillow', fps=10)
+
+plt.close(fig)
+
+
+</code></pre>
+</details>
+<hr/>
+<p><img alt="alt text" src="../square_wave_interference.gif"/></p>
+<blockquote>
+<p><strong>Fig. 2:</strong> Animated view of wave interference over time. Standing wave-like zones emerge where waves reinforce or cancel consistently.</p>
+</blockquote>
+<hr/>
+<h2 id="interference-pattern-analysis">Interference Pattern Analysis</h2>
+<h3 id="symmetry">Symmetry</h3>
+<ul>
+<li>The square symmetry leads to <strong>rotational and reflectional symmetry</strong> in the interference pattern.</li>
+<li>Patterns radiate outward but maintain consistent nodal (zero-displacement) and antinodal (maximum displacement) structures.</li>
+</ul>
+<h3 id="constructive-interference">Constructive Interference</h3>
+<p>Occurs where the path difference from multiple sources is an integer multiple of the wavelength:</p>
+<div class="arithmatex">\[
+\Delta r = n\lambda \quad (n \in \mathbb{Z})
+\]</div>
+<p>At these points, waves arrive in-phase and amplify.</p>
+<h3 id="destructive-interference">Destructive Interference</h3>
+<p>Occurs when the path difference equals a half-integer multiple of the wavelength:</p>
+<div class="arithmatex">\[
+\Delta r = \left(n + \frac{1}{2}\right)\lambda
+\]</div>
+<p>Waves arrive out-of-phase and cancel out.</p>
+<hr/>
+<h2 id="effect-of-parameters-discussion">Effect of Parameters (Discussion)</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Effect on Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Wavelength</strong></td>
+<td>Longer wavelength → broader fringes</td>
+</tr>
+<tr>
+<td><strong>Frequency</strong></td>
+<td>Affects animation speed (not spatial shape)</td>
+</tr>
+<tr>
+<td><strong>Amplitude</strong></td>
+<td>Affects brightness/intensity only</td>
+</tr>
+<tr>
+<td><strong>Polygon Shape</strong></td>
+<td>More sides → circular symmetry emerges</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="conclusion">Conclusion</h2>
+<p>This simulation provides a hands-on visual of wave interference principles:
+- <strong>Constructive and destructive interference</strong> emerge naturally from wave superposition
+- The <strong>geometry of the source layout</strong> determines the spatial structure of the pattern
+- These ideas extend to light, sound, and quantum waves — making this a fundamental study in all wave physics</p>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
