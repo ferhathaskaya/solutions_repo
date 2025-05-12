@@ -5,7 +5,7 @@
 
 Calculating the equivalent resistance of a circuit is essential for understanding current flow and energy use. Traditional methods become complex with large circuits, especially when combinations of series and parallel resistors are nested.
 
-Graph theory offers a systematic alternative. By modeling the circuit as a graph—where **nodes** are junctions and **edges** are resistors weighted by resistance—we can analyze circuits algorithmically. This approach is well-suited for automation, software tools, and exploring complex networks efficiently.
+---
 
 ## Implementation Strategy
 
@@ -26,6 +26,8 @@ $$
 $$
 
 This process repeats iteratively until the graph reduces to a single equivalent resistor between the input and output terminals.
+
+---
 
 ### Python Implementation
 
@@ -93,7 +95,7 @@ def simplify_circuit(G, start, end):
 ## Example 1: Mixed Series and Parallel Resistors
 
 <details>
-<summary>Click to expand visual's code</summary>
+<summary>Click to Expand Visual's Code</summary>
 
 <pre><code>
 
@@ -157,24 +159,6 @@ $$
 $$
 
 
-<details>
-<summary>Click to Expand Graph Code</summary>
-
-<pre><code>
-
-```python
-G = nx.MultiGraph()
-G.add_edge('A', 'B', resistance=4)
-G.add_edge('B', 'C', resistance=6)
-G.add_edge('A', 'C', resistance=12)
-
-result = simplify_circuit(G, 'A', 'C')
-print(f"Equivalent Resistance: {result:.2f} Ω")
-
-</code></pre>
-
-</details>
-
 **Example 1: Step-by-Step Simplification:**
 
 ![alt text](<Example 1 – Step-by-Step Simplification.png>)
@@ -236,7 +220,7 @@ draw_combined_steps(G_step1, G_final,
 ## Example 2: Nested Series and Parallel Configuration
 
 <details>
-<summary>Click to expand visual's code</summary>
+<summary>Click to Expand Visual's Code</summary>
 
 <pre><code>
 
@@ -292,25 +276,6 @@ draw_multigraph_as_simple(G2, "Example 2: Nested Series and Parallel", "example2
 - B–(C,D)–E becomes a **series chain**: 6 + 3 + 3 = 12 Ω
 - Final path A–B–(C,D)–D–E = 3 + 12 = 15 Ω
 
-<details>
-<summary>Click to Expand Code</summary>
-
-<pre><code>
-
-```python
-G2 = nx.MultiGraph()
-G2.add_edge('A', 'B', resistance=3)
-G2.add_edge('B', 'C', resistance=6)
-G2.add_edge('B', 'D', resistance=6)
-G2.add_edge('C', 'D', resistance=6)
-G2.add_edge('D', 'E', resistance=3)
-
-result2 = simplify_circuit(G2, 'A', 'E')
-print(f"Equivalent Resistance: {result2:.2f} Ω")
-
-</code></pre>
-
-</details>
 
 **Example 2 – Step-by-Step Simplification:**
 
@@ -353,7 +318,7 @@ draw_combined_steps(G2_step1, G2_final,
 ## Example 3: Complex Circuit with Multiple Loops
 
 <details>
-<summary>Click to expand visual's code</summary>
+<summary>Click to Expand Visual's Code</summary>
 
 <pre><code>
 
@@ -414,26 +379,6 @@ draw_multigraph_as_simple(G3, "Example 3: Complex Circuit with Loops", "example3
 
 Final total path A–C–E: 3 + 5.22 ≈ **8.22 Ω**
 
-<details>
-<summary>Click to Expand Code</summary>
-
-<pre><code>
-
-```python
-G3 = nx.MultiGraph()
-G3.add_edge('A', 'B', resistance=2)
-G3.add_edge('B', 'C', resistance=4)
-G3.add_edge('A', 'C', resistance=6)
-G3.add_edge('C', 'D', resistance=3)
-G3.add_edge('D', 'E', resistance=5)
-G3.add_edge('C', 'E', resistance=15)
-
-result3 = simplify_circuit(G3, 'A', 'E')
-print(f"Equivalent Resistance: {result3:.2f} Ω")
-
-</code></pre>
-
-</details>
 
 **Example 3 – Step-by-Step Simplification:**
 
@@ -483,12 +428,3 @@ The implemented method uses iterative detection of series and parallel resistor 
 - **Computational Efficiency:** Each iteration runs in \( O(n + m) \), where \( n \) is the number of nodes and \( m \) is the number of edges.
 - **Limitations:** The algorithm currently supports only resistive components and cannot simplify bridge networks or circuits containing voltage/current sources.
 - **Possible Extensions:** The approach could be enhanced with support for star-delta (Y–Δ) transformations, additional circuit elements, and a graphical interface for interactive analysis.
-
-
-
-
-
-
-
-
-
