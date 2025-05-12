@@ -6,7 +6,6 @@
 
 The Lorentz force describes how electric and magnetic fields affect charged particles. It plays a key role in technologies like **mass spectrometers**, **cyclotrons**, and **fusion devices**.
 
-By adjusting field strength or velocity, we can explore how invisible forces shape real-world systems.
 
 
 The Lorentz force is given by:
@@ -39,7 +38,7 @@ The ability to control charged particles using \( \vec{E} \) and \( \vec{B} \) f
 
 ## Theoretical Derivation
 
-### Case 1: Uniform Magnetic Field \( \vec{B} = B\hat{z} \), No Electric Field
+### Uniform Magnetic Field \( \vec{B} = B\hat{z} \), No Electric Field
 
 For a charged particle moving in the \( xy \)-plane with velocity \( \vec{v} = v_x\hat{x} + v_y\hat{y} \), the magnetic part of the Lorentz force is:
 
@@ -186,8 +185,8 @@ plt.show()
 ---
 ![alt text](<Charged Particle in Uniform Magnetic Field.png>)
 
-
 > **Fig. :** A charged particle moves in a circular path in the $xy$-plane under a uniform magnetic field along the $z$-axis. The Lorentz force acts perpendicular to velocity, producing uniform circular motion.
+
 ---
 ### Simulation 2: Motion in Combined Electric and Magnetic Fields
 
@@ -427,6 +426,7 @@ plt.savefig("exb_drift_E_variation.png")
 ![alt text](<Effect of Electric Field Strength on E × B Drift.png>)
 
 > **Fig. :** Particle trajectories for different electric field strengths. Higher 𝐸 leads to faster E × B drift and wider loop spacing, while 𝐵 remains fixed.
+
 ---
 
 ### Parameter Sweep 3: Initial Velocity
