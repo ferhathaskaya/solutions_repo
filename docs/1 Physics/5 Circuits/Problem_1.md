@@ -104,7 +104,6 @@ def simplify_circuit(G, start, end):
 <summary>Click to Expand Visual's Code</summary>
 
 <pre><code>
-
 ```python
 # Define graph structure
 G1 = nx.MultiGraph()
@@ -177,9 +176,6 @@ $$
 <summary>Click to Expand Example 1: Step-by-Step Simplification Code</summary>
 
 <pre><code>
-    # Re-run after kernel reset
-### Example 1 – Step-by-Step Simplification (Combined View)
-
 ```python
 # Define both graphs
 G_step1 = nx.MultiGraph()
@@ -230,7 +226,6 @@ draw_combined_steps(G_step1, G_final,
 <summary>Click to Expand Visual's Code</summary>
 
 <pre><code>
-
 ```python
 # Define graph structure
 G2 = nx.MultiGraph()
@@ -296,7 +291,6 @@ draw_multigraph_as_simple(G2, "Example 2: Nested Series and Parallel", "example2
 <summary>Click to Expand Example 2: Step-by-Step Simplification Code</summary>
 
 <pre><code>
-
 ```python
 # Step 1: Triangle B–C–D reduced
 G2_step1_corrected = nx.MultiGraph()
@@ -328,7 +322,6 @@ draw_combined_steps(
 <summary>Click to Expand Visual's Code</summary>
 
 <pre><code>
-
 # Define graph structure
 G3 = nx.MultiGraph()
 G3.add_edge('A', 'B', resistance=2)
@@ -399,8 +392,6 @@ Final total path A–C–E: 3 + 5.22 ≈ **8.22 Ω**
 <summary>Click to Expand Example 3: Step-by-Step Simplification Code</summary>
 
 <pre><code>
-    # Re-run after kernel reset
-
 ```python
 # Step-by-step graph structures
 G3_step1 = nx.MultiGraph()
