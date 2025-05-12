@@ -504,7 +504,7 @@ draw_multigraph_as_simple(G3, "Example 3: Complex Circuit with Loops", "example3
 <li>A–B–C is in series (2 + 4 = 6 Ω), in parallel with direct A–C (6 Ω)
   → A–C total: 3 Ω  </li>
 <li>C–D–E (3 + 5 = 8 Ω), in parallel with C–E (15 Ω)
-  → C–E total: <span class="arithmatex">\( \frac{1}{8} + \frac{1}{15} \)</span> → ~5.22 Ω</li>
+  → C–E total: $ \frac{1}{8} + \frac{1}{15} $ → ~5.22 Ω</li>
 </ul>
 <p>Final total path A–C–E: 3 + 5.22 ≈ <strong>8.22 Ω</strong></p>
 <p><strong>Example 3 – Step-by-Step Simplification:</strong></p>
@@ -541,7 +541,7 @@ draw_combined_steps(G3_step1, G3_final,
 <h2 id="efficiency-and-limitations">Efficiency and Limitations</h2>
 <p>The implemented method uses iterative detection of series and parallel resistor patterns. It performs well for small to medium-sized circuits and converges quickly in most practical cases.</p>
 <ul>
-<li><strong>Computational Efficiency:</strong> Each iteration runs in <span class="arithmatex">\( O(n + m) \)</span>, where <span class="arithmatex">\( n \)</span> is the number of nodes and <span class="arithmatex">\( m \)</span> is the number of edges.</li>
+<li><strong>Computational Efficiency:</strong> Each iteration runs in $ O(n + m) $, where $ n $ is the number of nodes and $ m $ is the number of edges.</li>
 <li><strong>Limitations:</strong> The algorithm currently supports only resistive components and cannot simplify bridge networks or circuits containing voltage/current sources.</li>
 <li><strong>Possible Extensions:</strong> The approach could be enhanced with support for star-delta (Y–Δ) transformations, additional circuit elements, and a graphical interface for interactive analysis.</li>
 </ul>
