@@ -377,7 +377,7 @@ draw_multigraph_as_simple(G3, "Example 3: Complex Circuit with Loops", "example3
 - A–B–C is in series (2 + 4 = 6 Ω), in parallel with direct A–C (6 Ω)
   → A–C total: 3 Ω  
 - C–D–E (3 + 5 = 8 Ω), in parallel with C–E (15 Ω)
-  → C–E total: \( \frac{1}{8} + \frac{1}{15} \) → ~5.22 Ω
+  → C–E total: $ \frac{1}{8} + \frac{1}{15} $ → ~5.22 Ω
 
 Final total path A–C–E: 3 + 5.22 ≈ **8.22 Ω**
 
@@ -426,6 +426,6 @@ This project demonstrated how graph theory can simplify the analysis of electric
 
 The implemented method uses iterative detection of series and parallel resistor patterns. It performs well for small to medium-sized circuits and converges quickly in most practical cases.
 
-- **Computational Efficiency:** Each iteration runs in \( O(n + m) \), where \( n \) is the number of nodes and \( m \) is the number of edges.
+- **Computational Efficiency:** Each iteration runs in $ O(n + m) $, where $ n $ is the number of nodes and $ m $ is the number of edges.
 - **Limitations:** The algorithm currently supports only resistive components and cannot simplify bridge networks or circuits containing voltage/current sources.
 - **Possible Extensions:** The approach could be enhanced with support for star-delta (Y–Δ) transformations, additional circuit elements, and a graphical interface for interactive analysis.
