@@ -177,11 +177,19 @@
 <p>Calculating the equivalent resistance of a circuit is essential for understanding current flow and energy use. Traditional methods become complex with large circuits, especially when combinations of series and parallel resistors are nested.</p>
 <hr/>
 <h2 id="implementation-strategy">Implementation Strategy</h2>
-<p>We represent the circuit as a weighted graph using a MultiGraph structure, where:
-- <strong>Each node</strong> is a junction in the circuit.
-- <strong>Each edge</strong> is a resistor, with its resistance stored as an edge weight.</p>
-<p>The simplification algorithm works by:
-1. <strong>Identifying parallel resistors</strong> — multiple edges between the same two nodes — and replacing them with one equivalent edge using:</p>
+<p>We represent the circuit as a weighted graph using a MultiGraph structure, where:</p>
+<ul>
+<li>
+<p><strong>Each node</strong> is a junction in the circuit.</p>
+</li>
+<li>
+<p><strong>Each edge</strong> is a resistor, with its resistance stored as an edge weight.</p>
+</li>
+</ul>
+<p>The simplification algorithm works by:</p>
+<ol>
+<li><strong>Identifying parallel resistors</strong> — multiple edges between the same two nodes — and replacing them with one equivalent edge using:</li>
+</ol>
 <div class="arithmatex">\[
  \frac{1}{R_{\text{eq}}} = \sum \frac{1}{R_i}
 \]</div>
@@ -194,9 +202,15 @@ $$</li>
 <p>This process repeats iteratively until the graph reduces to a single equivalent resistor between the input and output terminals.</p>
 <hr/>
 <h3 id="python-implementation">Python Implementation</h3>
-<p>We implement the algorithm using the <code>networkx</code> library. The graph is simplified by:
-- Merging parallel edges into one equivalent resistor.
-- Collapsing series paths through non-terminal nodes.</p>
+<p>We implement the algorithm using the <code>networkx</code> library. The graph is simplified by:</p>
+<ul>
+<li>
+<p>Merging parallel edges into one equivalent resistor.</p>
+</li>
+<li>
+<p>Collapsing series paths through non-terminal nodes.</p>
+</li>
+</ul>
 <p>The algorithm continues until no further reductions can be made.</p>
 <details>
 <summary>Click to Expand Python Implementation</summary>
@@ -411,34 +425,33 @@ draw_multigraph_as_simple(G2, "Example 2: Nested Series and Parallel", "example2
 <li>Final path A–B–(C,D)–D–E = 3 + 12 = 15 Ω</li>
 </ul>
 <p><strong>Example 2 – Step-by-Step Simplification:</strong></p>
-<p><img alt="alt text" src="../Example%202%20%E2%80%93%20Step-by-Step%20Simplification.png"/></p>
+<p><img alt="alt text" src="../Example%202%20%E2%80%93%20Step-by-Step%20Simplification-1.png"/></p>
 <blockquote>
-<p><strong>Fig. :</strong>  Left: The nested configuration between nodes B–C–D is reduced to a single 4 Ω branch.
-Right: This forms a linear path from A to E, which simplifies to a total equivalent resistance of 10 Ω.</p>
+<p><strong>Fig. :</strong>  Left: The triangular B–C–D configuration is reduced to a single 4 Ω equivalent resistor between B and D.
+Right: The resulting A–B–D–E path (3 + 4 + 3) is simplified into one 10 Ω resistor between A and E.</p>
 </blockquote>
 <details>
 <summary>Click to Expand Example 2: Step-by-Step Simplification Code</summary>
 <pre><code>
-    # Re-run after kernel reset
 
 ```python
-# Step-by-step graph structures
-G2_step1 = nx.MultiGraph()
-G2_step1.add_edge('A', 'B', resistance=3)
-G2_step1.add_edge('B', 'D', resistance=4)  # result of parallel &amp; nested reduction
-G2_step1.add_edge('D', 'E', resistance=3)
+# Step 1: Triangle B–C–D reduced
+G2_step1_corrected = nx.MultiGraph()
+G2_step1_corrected.add_edge('A', 'B', resistance=3)
+G2_step1_corrected.add_edge('B', 'D', resistance=4)  # result of reducing B–C–D network
+G2_step1_corrected.add_edge('D', 'E', resistance=3)
 
-G2_final = nx.MultiGraph()
-G2_final.add_edge('A', 'E', resistance=10)
+# Step 2: Final reduction to A–E
+G2_final_corrected = nx.MultiGraph()
+G2_final_corrected.add_edge('A', 'E', resistance=10)
 
-# Reuse draw_combined_steps() from earlier
-
-# Draw and save combined figure
-draw_combined_steps(G2_step1, G2_final,
-    ["Step 1: Nested Parallel Collapsed", "Step 2: Final Equivalent"],
-    "example2_combined_steps")
-
-
+# Reuse draw_combined_steps function
+draw_combined_steps(
+    G2_step1_corrected,
+    G2_final_corrected,
+    ["Step 1: B–C–D Triangle Reduced", "Step 2: Final Equivalent"],
+    "example2_corrected_combined_steps"
+)
 </code></pre>
 </details>
 <hr/>
