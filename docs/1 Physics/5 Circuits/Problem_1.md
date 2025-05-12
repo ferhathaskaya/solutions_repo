@@ -317,7 +317,6 @@ draw_combined_steps(
 
 ---
 
----
 ## Example 3: Complex Circuit with Multiple Loops
 
 <details>
