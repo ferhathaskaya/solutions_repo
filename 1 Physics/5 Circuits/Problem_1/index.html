@@ -415,9 +415,9 @@ draw_multigraph_as_simple(G2, "Example 2: Nested Series and Parallel", "example2
 </ul>
 <p><strong>Interpretation:</strong></p>
 <ul>
-<li>Nodes C and D form a <strong>parallel pair</strong> (6 Ω || 6 Ω = 3 Ω)</li>
-<li>B–(C,D)–E becomes a <strong>series chain</strong>: 6 + 3 + 3 = 12 Ω</li>
-<li>Final path A–B–(C,D)–D–E = 3 + 12 = 15 Ω</li>
+<li>B–C–D (6 + 6 = 12 Ω) is in parallel with B–D (6 Ω)<br/>
+  → Combined resistance: $ \left( \frac{1}{12} + \frac{1}{6} \right)^{-1} = 4 \, \Omega $</li>
+<li>The full path A–B–D–E becomes: 3 + 4 + 3 = <strong>10 Ω</strong></li>
 </ul>
 <p><strong>Example 2 – Step-by-Step Simplification:</strong></p>
 <p><img alt="alt text" src="../Example%202%20%E2%80%93%20Step-by-Step%20Simplification-1.png"/></p>
