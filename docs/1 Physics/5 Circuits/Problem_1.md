@@ -10,10 +10,13 @@ Calculating the equivalent resistance of a circuit is essential for understandin
 ## Implementation Strategy
 
 We represent the circuit as a weighted graph using a MultiGraph structure, where:
+
 - **Each node** is a junction in the circuit.
+
 - **Each edge** is a resistor, with its resistance stored as an edge weight.
 
 The simplification algorithm works by:
+
 1. **Identifying parallel resistors** — multiple edges between the same two nodes — and replacing them with one equivalent edge using:
 
 $$
@@ -32,10 +35,13 @@ This process repeats iteratively until the graph reduces to a single equivalent 
 ### Python Implementation
 
 We implement the algorithm using the `networkx` library. The graph is simplified by:
+
 - Merging parallel edges into one equivalent resistor.
+
 - Collapsing series paths through non-terminal nodes.
 
 The algorithm continues until no further reductions can be made.
+
 <details>
 <summary>Click to Expand Python Implementation</summary>
 
@@ -279,35 +285,34 @@ draw_multigraph_as_simple(G2, "Example 2: Nested Series and Parallel", "example2
 
 **Example 2 – Step-by-Step Simplification:**
 
-![alt text](<Example 2 – Step-by-Step Simplification.png>)
+![alt text](<Example 2 – Step-by-Step Simplification-1.png>)
 
-> **Fig. :**  Left: The nested configuration between nodes B–C–D is reduced to a single 4 Ω branch.
-Right: This forms a linear path from A to E, which simplifies to a total equivalent resistance of 10 Ω.
+> **Fig. :**  Left: The triangular B–C–D configuration is reduced to a single 4 Ω equivalent resistor between B and D.
+Right: The resulting A–B–D–E path (3 + 4 + 3) is simplified into one 10 Ω resistor between A and E.
 
 <details>
 <summary>Click to Expand Example 2: Step-by-Step Simplification Code</summary>
 
 <pre><code>
-    # Re-run after kernel reset
 
 ```python
-# Step-by-step graph structures
-G2_step1 = nx.MultiGraph()
-G2_step1.add_edge('A', 'B', resistance=3)
-G2_step1.add_edge('B', 'D', resistance=4)  # result of parallel & nested reduction
-G2_step1.add_edge('D', 'E', resistance=3)
+# Step 1: Triangle B–C–D reduced
+G2_step1_corrected = nx.MultiGraph()
+G2_step1_corrected.add_edge('A', 'B', resistance=3)
+G2_step1_corrected.add_edge('B', 'D', resistance=4)  # result of reducing B–C–D network
+G2_step1_corrected.add_edge('D', 'E', resistance=3)
 
-G2_final = nx.MultiGraph()
-G2_final.add_edge('A', 'E', resistance=10)
+# Step 2: Final reduction to A–E
+G2_final_corrected = nx.MultiGraph()
+G2_final_corrected.add_edge('A', 'E', resistance=10)
 
-# Reuse draw_combined_steps() from earlier
-
-# Draw and save combined figure
-draw_combined_steps(G2_step1, G2_final,
-    ["Step 1: Nested Parallel Collapsed", "Step 2: Final Equivalent"],
-    "example2_combined_steps")
-
-
+# Reuse draw_combined_steps function
+draw_combined_steps(
+    G2_step1_corrected,
+    G2_final_corrected,
+    ["Step 1: B–C–D Triangle Reduced", "Step 2: Final Equivalent"],
+    "example2_corrected_combined_steps"
+)
 </code></pre>
 
 </details>
