@@ -175,7 +175,7 @@
 <h1 id="equivalent-resistance-using-graph-theory">Equivalent Resistance Using Graph Theory</h1>
 <h2 id="motivation">Motivation</h2>
 <p>Calculating the equivalent resistance of a circuit is essential for understanding current flow and energy use. Traditional methods become complex with large circuits, especially when combinations of series and parallel resistors are nested.</p>
-<p>Graph theory offers a systematic alternative. By modeling the circuit as a graph—where <strong>nodes</strong> are junctions and <strong>edges</strong> are resistors weighted by resistance—we can analyze circuits algorithmically. This approach is well-suited for automation, software tools, and exploring complex networks efficiently.</p>
+<hr/>
 <h2 id="implementation-strategy">Implementation Strategy</h2>
 <p>We represent the circuit as a weighted graph using a MultiGraph structure, where:
 - <strong>Each node</strong> is a junction in the circuit.
@@ -192,6 +192,7 @@ $$
 $$</li>
 </ol>
 <p>This process repeats iteratively until the graph reduces to a single equivalent resistor between the input and output terminals.</p>
+<hr/>
 <h3 id="python-implementation">Python Implementation</h3>
 <p>We implement the algorithm using the <code>networkx</code> library. The graph is simplified by:
 - Merging parallel edges into one equivalent resistor.
@@ -251,7 +252,7 @@ def simplify_circuit(G, start, end):
 <hr/>
 <h2 id="example-1-mixed-series-and-parallel-resistors">Example 1: Mixed Series and Parallel Resistors</h2>
 <details>
-<summary>Click to expand visual's code</summary>
+<summary>Click to Expand Visual's Code</summary>
 <pre><code>
 
 ```python
@@ -302,21 +303,6 @@ This 10 Ω is in parallel with 12 Ω</p>
 <div class="arithmatex">\[
 \frac{1}{R_{\text{eq}}} = \frac{1}{10} + \frac{1}{12} \Rightarrow R_{\text{eq}} \approx 5.45\ \Omega
 \]</div>
-<details>
-<summary>Click to Expand Graph Code</summary>
-<pre><code>
-
-```python
-G = nx.MultiGraph()
-G.add_edge('A', 'B', resistance=4)
-G.add_edge('B', 'C', resistance=6)
-G.add_edge('A', 'C', resistance=12)
-
-result = simplify_circuit(G, 'A', 'C')
-print(f"Equivalent Resistance: {result:.2f} Ω")
-
-</code></pre>
-</details>
 <p><strong>Example 1: Step-by-Step Simplification:</strong></p>
 <p><img alt="alt text" src="../Example%201%20%E2%80%93%20Step-by-Step%20Simplification.png"/></p>
 <blockquote>
@@ -372,7 +358,7 @@ draw_combined_steps(G_step1, G_final,
 <hr/>
 <h2 id="example-2-nested-series-and-parallel-configuration">Example 2: Nested Series and Parallel Configuration</h2>
 <details>
-<summary>Click to expand visual's code</summary>
+<summary>Click to Expand Visual's Code</summary>
 <pre><code>
 
 ```python
@@ -424,23 +410,6 @@ draw_multigraph_as_simple(G2, "Example 2: Nested Series and Parallel", "example2
 <li>B–(C,D)–E becomes a <strong>series chain</strong>: 6 + 3 + 3 = 12 Ω</li>
 <li>Final path A–B–(C,D)–D–E = 3 + 12 = 15 Ω</li>
 </ul>
-<details>
-<summary>Click to Expand Code</summary>
-<pre><code>
-
-```python
-G2 = nx.MultiGraph()
-G2.add_edge('A', 'B', resistance=3)
-G2.add_edge('B', 'C', resistance=6)
-G2.add_edge('B', 'D', resistance=6)
-G2.add_edge('C', 'D', resistance=6)
-G2.add_edge('D', 'E', resistance=3)
-
-result2 = simplify_circuit(G2, 'A', 'E')
-print(f"Equivalent Resistance: {result2:.2f} Ω")
-
-</code></pre>
-</details>
 <p><strong>Example 2 – Step-by-Step Simplification:</strong></p>
 <p><img alt="alt text" src="../Example%202%20%E2%80%93%20Step-by-Step%20Simplification.png"/></p>
 <blockquote>
@@ -476,7 +445,7 @@ draw_combined_steps(G2_step1, G2_final,
 <hr/>
 <h2 id="example-3-complex-circuit-with-multiple-loops">Example 3: Complex Circuit with Multiple Loops</h2>
 <details>
-<summary>Click to expand visual's code</summary>
+<summary>Click to Expand Visual's Code</summary>
 <pre><code>
 
 # Define graph structure
@@ -532,24 +501,6 @@ draw_multigraph_as_simple(G3, "Example 3: Complex Circuit with Loops", "example3
   → C–E total: <span class="arithmatex">\( \frac{1}{8} + \frac{1}{15} \)</span> → ~5.22 Ω</li>
 </ul>
 <p>Final total path A–C–E: 3 + 5.22 ≈ <strong>8.22 Ω</strong></p>
-<details>
-<summary>Click to Expand Code</summary>
-<pre><code>
-
-```python
-G3 = nx.MultiGraph()
-G3.add_edge('A', 'B', resistance=2)
-G3.add_edge('B', 'C', resistance=4)
-G3.add_edge('A', 'C', resistance=6)
-G3.add_edge('C', 'D', resistance=3)
-G3.add_edge('D', 'E', resistance=5)
-G3.add_edge('C', 'E', resistance=15)
-
-result3 = simplify_circuit(G3, 'A', 'E')
-print(f"Equivalent Resistance: {result3:.2f} Ω")
-
-</code></pre>
-</details>
 <p><strong>Example 3 – Step-by-Step Simplification:</strong></p>
 <p><img alt="alt text" src="../Example%203%20%E2%80%93%20Step-by-Step%20Simplification.png"/></p>
 <blockquote>
