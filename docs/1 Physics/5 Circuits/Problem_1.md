@@ -170,7 +170,8 @@ $$
 ![alt text](<Example 1 – Step-by-Step Simplification.png>)
 
 > **Fig. :**  Left: After collapsing the A–B–C series path into a single 10 Ω edge, the circuit includes two parallel resistors between A and C.
-Right: These are then reduced to one equivalent resistor of 5.45 Ω, completing the simplification. 
+
+> **Fig. :** Right: These are then reduced to one equivalent resistor of 5.45 Ω, completing the simplification. 
 
 <details>
 <summary>Click to Expand Example 1: Step-by-Step Simplification Code</summary>
@@ -288,7 +289,8 @@ draw_multigraph_as_simple(G2, "Example 2: Nested Series and Parallel", "example2
 ![alt text](<Example 2 – Step-by-Step Simplification-1.png>)
 
 > **Fig. :**  Left: The triangular B–C–D configuration is reduced to a single 4 Ω equivalent resistor between B and D.
-Right: The resulting A–B–D–E path (3 + 4 + 3) is simplified into one 10 Ω resistor between A and E.
+
+> **Fig. :** Right: The resulting A–B–D–E path (3 + 4 + 3) is simplified into one 10 Ω resistor between A and E.
 
 <details>
 <summary>Click to Expand Example 2: Step-by-Step Simplification Code</summary>
@@ -390,7 +392,8 @@ Final total path A–C–E: 3 + 5.22 ≈ **8.22 Ω**
 ![alt text](<Example 3 – Step-by-Step Simplification.png>)
 
 > **Fig. :**  Left: The parallel paths A–B–C with A–C, and C–D–E with C–E, are reduced to single resistors.
-Right: The simplified A–C–E path becomes one equivalent edge between A and E, completing the circuit reduction.
+
+> **Fig. :** Right: The simplified A–C–E path becomes one equivalent edge between A and E, completing the circuit reduction.
 
 <details>
 <summary>Click to Expand Example 3: Step-by-Step Simplification Code</summary>
