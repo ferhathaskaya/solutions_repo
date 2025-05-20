@@ -172,6 +172,248 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="measuring-earths-gravitational-acceleration-with-a-pendulum">Measuring Earth's Gravitational Acceleration with a Pendulum</h1>
+<h2 id="motivation">Motivation</h2>
+<p>The acceleration due to gravity, <span class="arithmatex">\( g \)</span>, is a fundamental constant that affects all objects in free fall. Precise measurement of <span class="arithmatex">\( g \)</span> is important in fields ranging from physics and engineering to geophysics and metrology.</p>
+<p>One classical and accessible method to estimate <span class="arithmatex">\( g \)</span> involves analyzing the oscillations of a simple pendulum. The period of a pendulum’s swing depends directly on the local gravitational acceleration and the length of the pendulum.</p>
+<h2 id="theoretical-background">Theoretical Background</h2>
+<p>For small angular displacements (typically less than 15°), the motion of a simple pendulum can be approximated as simple harmonic. The theoretical period <span class="arithmatex">\( T \)</span> of one full oscillation is given by:</p>
+<div class="arithmatex">\[
+T = 2\pi \sqrt{\frac{L}{g}}
+\]</div>
+<p>Where:
+- <span class="arithmatex">\( T \)</span> is the period of oscillation (in seconds),</p>
+<ul>
+<li>
+<p><span class="arithmatex">\( L \)</span> is the length of the pendulum (in meters),</p>
+</li>
+<li>
+<p><span class="arithmatex">\( g \)</span> is the acceleration due to gravity (in m/s²).</p>
+</li>
+</ul>
+<p>Rearranging the equation allows solving for <span class="arithmatex">\( g \)</span>:</p>
+<div class="arithmatex">\[
+g = \frac{4\pi^2 L}{T^2}
+\]</div>
+<p>To improve accuracy and reduce human error, the experiment measures the time for 10 oscillations and calculates the average. Uncertainties in both the length and the time measurements must be considered. The uncertainty in <span class="arithmatex">\( g \)</span> is calculated using standard propagation of uncertainty:</p>
+<div class="arithmatex">\[
+\Delta g = g \sqrt{\left(\frac{\Delta L}{L}\right)^2 + \left(2 \cdot \frac{\Delta T}{T}\right)^2}
+\]</div>
+<p>This relation accounts for the relative uncertainties in both <span class="arithmatex">\( L \)</span> and <span class="arithmatex">\( T \)</span>.</p>
+<h2 id="experimental-setup">Experimental Setup</h2>
+<p>A simple pendulum was constructed using a string and a small weight suspended from a fixed point. The length <span class="arithmatex">\( L \)</span> of the pendulum was measured from the suspension point to the center of mass of the weight using a ruler or measuring tape. The resolution of the measuring tool determines the uncertainty in length:</p>
+<div class="arithmatex">\[
+\Delta L = \frac{\text{Ruler Resolution}}{2}
+\]</div>
+<p>The pendulum was displaced by a small angle (less than 15°) and released. The time for 10 full oscillations (<span class="arithmatex">\( T_{10} \)</span>) was measured using a stopwatch or smartphone timer and repeated 10 times to account for variability in human reaction time.</p>
+<p><img alt="alt text" src="../Simple%20Pendulum%20Schematic.png"/></p>
+<blockquote>
+<p><strong>Fig. :</strong> Schematic of a simple pendulum. The length <span class="arithmatex">\( L \)</span> is measured from the pivot to the center of mass of the bob. The angle <span class="arithmatex">\( \theta \)</span> represents the initial small displacement from equilibrium.</p>
+</blockquote>
+<details>
+<summary>Click to Expand Pendulum Schematic Code</summary>
+<pre><code>
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Parameters
+L = 1.0  # length of the pendulum
+theta = np.radians(10)  # small displacement angle in radians
+
+# Points
+origin = np.array([0, 0])
+bob = np.array([L * np.sin(theta), -L * np.cos(theta)])
+
+# Arc for theta
+arc_theta = np.linspace(0, theta, 100)
+arc_x = 0.2 * np.sin(arc_theta)
+arc_y = -0.2 * np.cos(arc_theta)
+
+# Plot setup
+plt.figure(figsize=(6, 6))
+plt.plot([origin[0], bob[0]], [origin[1], bob[1]], color='black', linewidth=2, label="String (L)")
+plt.plot(arc_x, arc_y, color='gray', linestyle='--')
+plt.plot([0, 0], [0, -L], color='lightgray', linestyle=':')
+plt.plot(bob[0], bob[1], 'o', color='blue', markersize=10)
+
+# Labels
+plt.text(bob[0] + 0.05, bob[1], "Bob", fontsize=10)
+plt.text(-0.15, -L / 2, "L", fontsize=12)
+plt.text(0.1, -0.05, r"$\theta$", fontsize=12)
+
+# Formatting
+plt.xlim(-1.2, 1.2)
+plt.ylim(-1.2, 0.2)
+plt.gca().set_aspect('equal')
+plt.axis('off')
+plt.title("Simple Pendulum Schematic")
+plt.savefig("pendulum_schematic.png", bbox_inches='tight')
+plt.close()
+</code></pre>
+</details>
+<hr/>
+<h2 id="raw-data-and-measurement-summary">Raw Data and Measurement Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Trial</th>
+<th><span class="arithmatex">\( T_{10} \)</span> (s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>20.15</td>
+</tr>
+<tr>
+<td>2</td>
+<td>20.21</td>
+</tr>
+<tr>
+<td>3</td>
+<td>20.09</td>
+</tr>
+<tr>
+<td>4</td>
+<td>20.12</td>
+</tr>
+<tr>
+<td>5</td>
+<td>20.18</td>
+</tr>
+<tr>
+<td>6</td>
+<td>20.10</td>
+</tr>
+<tr>
+<td>7</td>
+<td>20.14</td>
+</tr>
+<tr>
+<td>8</td>
+<td>20.19</td>
+</tr>
+<tr>
+<td>9</td>
+<td>20.16</td>
+</tr>
+<tr>
+<td>10</td>
+<td>20.11</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="alt text" src="../Distribution%20of%20Measured%20Times%20for%2010%20Oscillations.png"/></p>
+<blockquote>
+<p><strong>Fig. :</strong> Histogram of repeated timing measurements for 10 pendulum oscillations. The spread reflects timing variability and justifies the use of mean and uncertainty calculations.</p>
+</blockquote>
+<details>
+<summary>Click to Expand Visual's Code</summary>
+<pre><code>
+import matplotlib.pyplot as plt
+
+T10_measurements = [20.15, 20.21, 20.09, 20.12, 20.18,
+                    20.10, 20.14, 20.19, 20.16, 20.11]
+
+plt.figure(figsize=(8, 5))
+plt.hist(T10_measurements, bins=7, color='skyblue', edgecolor='black')
+plt.title("Distribution of Measured Times for 10 Oscillations")
+plt.xlabel("Time for 10 Oscillations (s)")
+plt.ylabel("Frequency")
+plt.grid(True)
+plt.savefig("t10_measurements_histogram.png")
+plt.close()
+
+</code></pre>
+</details>
+<hr/>
+<p><strong>Length of pendulum:</strong><br/>
+<span class="arithmatex">\( L = 1.000 \, \text{m} \)</span><br/>
+<span class="arithmatex">\( \Delta L = 0.005 \, \text{m} \)</span> <em>(ruler resolution: 1 cm)</em></p>
+<p><strong>Statistical summaries:</strong><br/>
+- <span class="arithmatex">\( \overline{T}_{10} = 20.145 \, \text{s} \)</span> </p>
+<ul>
+<li>
+<p><span class="arithmatex">\( \sigma_T = 0.037 \, \text{s} \)</span> </p>
+</li>
+<li>
+<p><span class="arithmatex">\( \Delta T_{10} = \frac{0.037}{\sqrt{10}} = 0.012 \, \text{s} \)</span> </p>
+</li>
+<li>
+<p><span class="arithmatex">\( T = \frac{20.145}{10} = 2.0145 \, \text{s} \)</span></p>
+</li>
+</ul>
+<h2 id="results">Results</h2>
+<ul>
+<li>
+<p>Estimated gravitational acceleration:<br/>
+<span class="arithmatex">\( g = 9.73 \, \text{m/s}^2 \)</span></p>
+</li>
+<li>
+<p>Uncertainty in <span class="arithmatex">\( g \)</span>:<br/>
+<span class="arithmatex">\( \Delta g = 0.12 \, \text{m/s}^2 \)</span></p>
+</li>
+<li>
+<p>Final result (with uncertainty):<br/>
+<span class="arithmatex">\( g = (9.73 \pm 0.12) \, \text{m/s}^2 \)</span></p>
+</li>
+</ul>
+<details>
+<summary>Click to Expand Analysis Code</summary>
+<pre><code>
+import numpy as np
+
+# Given values
+L = 1.000       # length in meters
+dL = 0.005      # uncertainty in length
+
+T10_avg = 20.145   # average time for 10 oscillations
+sigma_T = 0.037    # standard deviation of T10
+n = 10
+
+# Calculate mean time and uncertainty
+T = T10_avg / 10
+dT = sigma_T / np.sqrt(n)
+
+# Calculate g
+g = (4 * np.pi**2 * L) / T**2
+
+# Propagate uncertainty
+dg = g * np.sqrt((dL / L)**2 + (2 * dT / T)**2)
+
+g, dg
+</code></pre>
+</details>
+<hr/>
+<p><img alt="alt text" src="../g_uncertainty_contributions.png"/></p>
+<blockquote>
+<p><strong>Fig. :</strong> Relative contributions of <span class="arithmatex">\( \Delta L \)</span> and <span class="arithmatex">\( \Delta T \)</span> to the uncertainty in the calculated value of <span class="arithmatex">\( g \)</span>. The timing error is seen to dominate, consistent with the experimental procedure.</p>
+</blockquote>
+<h2 id="discussion-of-uncertainty-sources">Discussion of Uncertainty Sources</h2>
+<p>Several factors contribute to the uncertainty in the calculated value of <span class="arithmatex">\( g \)</span>:</p>
+<ul>
+<li>
+<p><strong>Length Measurement (<span class="arithmatex">\( \Delta L \)</span>)</strong>:<br/>
+  The ruler used had a resolution of 1 cm, resulting in an uncertainty of ±0.005 m. This contributes directly to the uncertainty in <span class="arithmatex">\( g \)</span>, though its effect is relatively small due to its appearance under a square root.</p>
+</li>
+<li>
+<p><strong>Timing Variability (<span class="arithmatex">\( \Delta T \)</span>)</strong>:<br/>
+  Human reaction time when starting and stopping the stopwatch introduces variation across trials. This is the dominant source of uncertainty, as it appears squared in the error propagation formula.</p>
+</li>
+<li>
+<p><strong>Small Angle Assumption</strong>:<br/>
+  The formula for <span class="arithmatex">\( T \)</span> assumes a small angular displacement. Deviating beyond ~15° can introduce systematic error by violating the simple harmonic approximation.</p>
+</li>
+<li>
+<p><strong>Air Resistance and Friction</strong>:<br/>
+  While typically small, air drag and pivot friction can slightly alter the period, affecting the accuracy of the result.</p>
+</li>
+</ul>
+<p>Overall, the estimated value of <span class="arithmatex">\( g = 9.73 \pm 0.12 \, \text{m/s}^2 \)</span> is consistent with the standard value <span class="arithmatex">\( 9.81 \, \text{m/s}^2 \)</span> within uncertainty bounds.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The acceleration due to gravity was measured using a simple pendulum, yielding an estimate of<br/>
+<span class="arithmatex">\( g = (9.73 \pm 0.12) \, \text{m/s}^2 \)</span>.</p>
+<p>The result is in good agreement with the standard value of <span class="arithmatex">\( 9.81 \, \text{m/s}^2 \)</span>, demonstrating the reliability of the pendulum method when proper measurement and uncertainty analysis are applied. The dominant source of uncertainty was timing variability, highlighting the importance of repeated trials and careful data handling in experimental physics.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
